@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CLB Hub - Hệ thống tìm kiếm và đăng ký câu lạc bộ thông minh dành cho sinh viên ULIS">
+    <title>CLB Hub - Ghép Đôi CLB: Bến ĐỖ Thanh Xuân Của Bạn</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar (Sticky) -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="logo">
+                    <span class="logo-icon">🎭</span>
+                    <span class="logo-text">CLB Hub</span>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+                    <li><a href="#categories" class="nav-link">Danh mục</a></li>
+                    <li><a href="#top-clubs" class="nav-link">Top Clubs</a></li>
+                    <li><a href="#tips" class="nav-link">Cẩm nang</a></li>
+                    <li><a href="#reviews" class="nav-link">Review</a></li>
+                </ul>
+            </div>
+            <div class="navbar-right">
+                <button class="btn-ghost" onclick="handleLogin()">Đăng nhập</button>
+                <button class="btn-primary" onclick="smoothScroll('categories')">Khám phá ngay</button>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero" onclick="closeMobileMenu()">Trang chủ</a>
+            <a href="#categories" onclick="closeMobileMenu()">Danh mục</a>
+            <a href="#top-clubs" onclick="closeMobileMenu()">Top Clubs</a>
+            <a href="#tips" onclick="closeMobileMenu()">Cẩm nang</a>
+            <a href="#reviews" onclick="closeMobileMenu()">Review</a>
+            <button class="btn-ghost" onclick="handleLogin(); closeMobileMenu()">Đăng nhập</button>
+            <button class="btn-primary" onclick="smoothScroll('categories'); closeMobileMenu()">Khám phá ngay</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video">
+                <source src="assets/images/hero-background.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">CLB HUB - GHÉP ĐÔI CLB</h1>
+                <p class="hero-subtitle">Bến đỖ thanh xuân của bạn</p>
+                <p class="hero-description">
+                    Hệ thống đề xuất và tìm kiếm câu lạc bộ thông minh dành riêng cho sinh viên ULIS. 
+                    Khám phá cộng đồng phù hợp với bạn dựa trên sở thích, ngành học và thời gian của bạn.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary btn-large" onclick="smoothScroll('categories')">
+                        🔍 Tìm CLB ngay
+                    </button>
+                    <button class="btn-secondary btn-large" onclick="openQuizModal()">
+                        🪄 Làm Quiz Ghép đôi
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-illustration.png" alt="CLB Activities Illustration" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Category & Discovery Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Khám phá hệ sinh thái CLB</h2>
+            <p class="section-subtitle">Tìm kiếm câu lạc bộ theo sở thích của bạn</p>
+            
+            <!-- Filter Chips -->
+            <div class="filter-container">
+                <button class="filter-chip active" data-category="all" onclick="filterClubs('all')">
+                    Tất cả
+                </button>
+                <button class="filter-chip" data-category="academic" onclick="filterClubs('academic')">
+                    📚 Học thuật
+                </button>
+                <button class="filter-chip" data-category="skill" onclick="filterClubs('skill')">
+                    🎯 Kỹ năng
+                </button>
+                <button class="filter-chip" data-category="art" onclick="filterClubs('art')">
+                    🎨 Nghệ thuật
+                </button>
+                <button class="filter-chip" data-category="sport" onclick="filterClubs('sport')">
+                    ⚽ Thể thao
+                </button>
+                <button class="filter-chip" data-category="volunteer" onclick="filterClubs('volunteer')">
+                    🤝 Tình nguyện
+                </button>
+            </div>
+
+            <!-- Club Cards Grid (3x3) -->
+            <div class="clubs-grid" id="clubsGrid">
+                <!-- Clubs will be dynamically inserted here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <button class="page-btn" id="prevPageBtn" onclick="prevPage()">← Trước</button>
+                <div class="page-numbers" id="pageNumbers"></div>
+                <button class="page-btn" id="nextPageBtn" onclick="nextPage()">Sau →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Rated Section -->
+    <section id="top-clubs" class="top-clubs-section">
+        <div class="container">
+            <h2 class="section-title">🏆 Bảng Vàng CLB</h2>
+            <p class="section-subtitle">Những câu lạc bộ được yêu thích nhất</p>
+            
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="prevTopClub()">❮</button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Top clubs will be dynamically inserted here -->
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="nextTopClub()">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Review thật từ "Người trong cuộc"</h2>
+            <p class="section-subtitle">Nghe chia sẻ từ các thành viên CLB</p>
+            
+            <div class="reviews-masonry" id="reviewsMasonry">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Knowledge Base Section -->
+    <section id="tips" class="tips-section">
+        <div class="container">
+            <h2 class="section-title">Hành trang "Nhập môn" CLB</h2>
+            <p class="section-subtitle">Những lời khuyên hữu ích từ các cựu thành viên</p>
+            
+            <div class="accordion-container">
+                <!-- Accordion items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-message">
+                <h3>Một lời từ team CLB Hub</h3>
+                <p>
+                    Chúng tôi tạo ra CLB Hub vì tin rằng mỗi sinh viên xứng đáng tìm thấy cộng đồng 
+                    của riêng mình - nơi họ có thể phát triển, học hỏi và tạo nên những kỷ niệm tuyệt vời.
+                </p>
+            </div>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Điều hướng</h4>
+                    <ul>
+                        <li><a href="#categories">Danh mục CLB</a></li>
+                        <li><a href="#top-clubs">Top Clubs</a></li>
+                        <li><a href="#tips">Cẩm nang</a></li>
+                        <li><a href="#reviews">Review</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Pháp lý</h4>
+                    <ul>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kết nối</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" class="social-icon facebook" title="Facebook">
+                            <span>f</span>
+                        </a>
+                        <a href="https://tiktok.com" class="social-icon tiktok" title="TikTok">
+                            <span>♪</span>
+                        </a>
+                        <a href="https://instagram.com" class="social-icon instagram" title="Instagram">
+                            <span>📷</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CLB Hub ULIS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Club Detail Modal -->
+    <div id="clubModal" class="modal">
+        <div class="modal-overlay" onclick="closeClubModal()"></div>
+        <div class="modal-content club-modal">
+            <button class="modal-close" onclick="closeClubModal()">✕</button>
+            <div class="modal-header">
+                <img id="modalClubImage" src="" alt="Club" class="modal-image">
+                <div id="modalClubLogo" class="modal-logo">📚</div>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalClubName"></h2>
+                
+                <div class="modal-section">
+                    <h3>📝 Giới Thiệu</h3>
+                    <p id="modalClubDescription"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>📸 Thư Viện Ảnh</h3>
+                    <div class="image-carousel" id="imageCarousel">
+                        <div class="carousel-images" id="carouselImages"></div>
+                        <div class="carousel-dots" id="carouselDots"></div>
+                        <button class="carousel-btn-prev" onclick="prevGalleryImage()">❮</button>
+                        <button class="carousel-btn-next" onclick="nextGalleryImage()">❯</button>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>👔 Lãnh Đạo</h3>
+                    <p><strong>Chủ nhiệm:</strong> <span id="modalClubPresident"></span></p>
+                    <p><strong>Phó Chủ nhiệm:</strong> <span id="modalClubVicePresident"></span></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🕒 Lịch sinh hoạt</h3>
+                    <p id="modalClubSchedule"></p>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>🎯 Hoạt động tiêu biểu</h3>
+                    <p id="modalClubActivities"></p>
+                </div>
+                
+                <div class="modal-section warning-box">
+                    <h3>💡 Yêu cầu</h3>
+                    <p id="modalClubRequirements"></p>
+                </div>
+                
+                <div class="modal-section success-box">
+                    <h3>🎁 Quyền lợi</h3>
+                    <p id="modalClubBenefits"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="modalFormLink" href="#" class="btn-primary btn-full-width" target="_blank">
+                    ✍️ Điền Form Đăng Ký Phỏng Vấn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-overlay" onclick="closeReviewModal()"></div>
+        <div class="modal-content review-modal">
+            <button class="modal-close" onclick="closeReviewModal()">✕</button>
+            <div class="modal-body">
+                <div class="review-full">
+                    <div class="review-header-full">
+                        <div class="review-avatar">😊</div>
+                        <div class="review-author-full">
+                            <div class="review-name" id="reviewModalAuthor"></div>
+                            <div class="review-rating" id="reviewModalRating"></div>
+                        </div>
+                    </div>
+                    <div class="review-text-full" id="reviewModalText"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal">
+        <div class="modal-overlay" onclick="closeQuizModal()"></div>
+        <div class="modal-content quiz-modal">
+            <button class="modal-close" onclick="closeQuizModal()">✕</button>
+            <div class="quiz-header">
+                <h2>🪄 Quiz Ghép Đôi CLB</h2>
+                <p>Trả lời 3 câu hỏi để tìm CLB phù hợp với bạn</p>
+            </div>
+            <div class="quiz-body">
+                <div class="quiz-question">
+                    <label>Bạn quan tâm nhất đến lĩnh vực nào?</label>
+                    <div class="quiz-options">
+                        <label><input type="radio" name="interest" value="academic"> Học thuật</label>
+                        <label><input type="radio" name="interest" value="skill"> Kỹ năng mềm</label>
+                        <label><input type="radio" name="interest" value="art"> Nghệ thuật</label>
+                        <label><input type="radio" name="interest" value="sport"> Thể thao</label>
+                        <label><input type="radio" name="interest" value="volunteer"> Tình nguyện</label>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-footer">
+                <button class="btn-primary" onclick="submitQuiz()">
+                    Tìm CLB cho tôi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" onclick="backToTop()">↑</button>
+
+    <!-- Scripts -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
