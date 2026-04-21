@@ -3,12 +3,12 @@ const clubsData = [
     // Academic Clubs
     {
         id: 1,
-        name: 'ULIS Coding Club',
+        name: 'PSC - Câu lạc bộ Hùng biện Trường Đại học Ngoại ngữ',
         category: 'academic',
         status: true,
         shortDescription: 'Câu lạc bộ lập trình với các workshop về Web, Mobile, AI.',
-        fullDescription: 'ULIS Coding Club là nơi quy tụ những sinh viên yêu thích lập trình. Chúng tôi tổ chức các buổi workshop định kỳ về Web Development, Mobile Development, AI/Machine Learning và các công nghệ mới nhất. Cộng đồng chúng tôi không chỉ là nơi học code mà còn là nơi networking với các engineer từ các công ty lớn.',
-        president: 'Nguyễn Văn A',
+        fullDescription: 'PSC là Câu lạc bộ Hùng biện đầu tiên và duy nhất tại Trường Đại học Ngoại ngữ - Đại học Quốc Gia Hà Nội, chuyên phát triển kỹ năng thuyết trình, hùng biện và tranh biện cho sinh viên thông qua các hoạt động như workshop, talkshow và cuộc thi.',
+        president: 'Thường gồm Ban Điều hành (Chủ nhiệm, Phó chủ nhiệm) và các ban chuyên môn như: Ban Chuyên môn, Ban Truyền thông, Ban Sự kiện, Ban Đối ngoại. ',
         vicePresident: 'Trần Thị B',
         schedule: 'Thứ 5 hàng tuần, 18:30-20:00 tại nhà D',
         activities: '• Weekly coding workshops\n• Hackathon events\n• Project collaboration\n• Guest talks from industry\n• Code review sessions',
@@ -19,8 +19,9 @@ const clubsData = [
         backgroundImage: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=400&fit=crop',
         galleryImages: [
             'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1633356713697-4f48e1c01890?w=600&h=400&fit=crop',
-            'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop'
+            'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+            'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop'
         ],
         rating: 4.8,
         members: 150,

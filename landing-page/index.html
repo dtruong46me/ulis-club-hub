@@ -19,7 +19,7 @@
             </div>
             <div class="navbar-center">
                 <ul class="nav-links">
-                    <li><a href="#hero" class="nav-link">Trang chủ</a></li>
+                    <li><a href="#hero" class="nav-link">Home</a></li>
                     <li><a href="#categories" class="nav-link">Danh mục</a></li>
                     <li><a href="#top-clubs" class="nav-link">Top Clubs</a></li>
                     <li><a href="#tips" class="nav-link">Cẩm nang</a></li>
@@ -35,7 +35,7 @@
         </div>
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
-            <a href="#hero" onclick="closeMobileMenu()">Trang chủ</a>
+            <a href="#hero" onclick="closeMobileMenu()">Home</a>
             <a href="#categories" onclick="closeMobileMenu()">Danh mục</a>
             <a href="#top-clubs" onclick="closeMobileMenu()">Top Clubs</a>
             <a href="#tips" onclick="closeMobileMenu()">Cẩm nang</a>
@@ -48,7 +48,7 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background">
-            <video autoplay muted loop class="hero-video">
+            <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=900&fit=crop">
                 <source src="assets/images/hero-background.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
@@ -65,13 +65,10 @@
                     <button class="btn-primary btn-large" onclick="smoothScroll('categories')">
                         🔍 Tìm CLB ngay
                     </button>
-                    <button class="btn-secondary btn-large" onclick="openQuizModal()">
-                        🪄 Làm Quiz Ghép đôi
-                    </button>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/hero-illustration.png" alt="CLB Activities Illustration" class="hero-img">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop" alt="CLB Activities Illustration" class="hero-img">
             </div>
         </div>
     </section>
@@ -227,7 +224,7 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3>📸 Thư Viện Ảnh</h3>
+                    <h3>📷 Góc Nhìn Hoạt Động Của CLB</h3>
                     <div class="image-carousel" id="imageCarousel">
                         <div class="carousel-images" id="carouselImages"></div>
                         <div class="carousel-dots" id="carouselDots"></div>
@@ -237,9 +234,10 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3>👔 Lãnh Đạo</h3>
-                    <p><strong>Chủ nhiệm:</strong> <span id="modalClubPresident"></span></p>
+                    <h3>👔 Lãnh Đạo & Các Ban</h3>
+                    <p><strong>Chủ nhiệm/Liên hệ:</strong> <span id="modalClubPresident"></span></p>
                     <p><strong>Phó Chủ nhiệm:</strong> <span id="modalClubVicePresident"></span></p>
+                    <p><strong>Các ban chuyên môn:</strong> <span>Ban Truyền thông, Ban Sự kiện, Ban Hậu cần</span></p>
                 </div>
 
                 <div class="modal-section">

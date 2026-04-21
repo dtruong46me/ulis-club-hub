@@ -7,7 +7,7 @@ let currentCarouselIndex = 0;
 let currentGalleryIndex = 0;
 let selectedClub = null;
 let currentPage = 1;
-let clubsPerPage = 9; // 3x3 grid
+let clubsPerPage = window.innerWidth <= 480 ? 3 : 9; // 3x3 grid or 3x1 on mobile
 
 document.addEventListener('DOMContentLoaded', () => {
     filterClubs('all');
@@ -47,9 +47,13 @@ function renderClubs(category, page = 1) {
 }
 
 function createClubCard(club) {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
+    card.href = 'javascript:void(0)';
     card.className = 'club-card';
-    card.style.cursor = 'pointer';
+    card.onclick = (e) => {
+        e.preventDefault();
+        openClubModal(club.id);
+    };
 
     const statusText = club.status ? 'Đang tuyển TV' : 'Đóng form';
     const statusClass = club.status ? 'status-open' : 'status-closed';
@@ -63,14 +67,8 @@ function createClubCard(club) {
             </div>
             <h3 class="club-card-title">${club.name}</h3>
             <p class="club-card-description">${club.shortDescription || club.description}</p>
-            <button class="btn-ghost" onclick="openClubModal(${club.id}); event.stopPropagation();">
-                📄 Xem chi tiết
-            </button>
         </div>
     `;
-
-    // Click anywhere on card opens modal
-    card.addEventListener('click', () => openClubModal(club.id));
 
     return card;
 }
@@ -93,7 +91,7 @@ function renderPaginationControls(totalClubs, currentPage) {
         pageBtn.onclick = () => {
             currentPage = i;
             filterClubs(currentFilter, i);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            smoothScroll('categories');
         };
         pageNumbers.appendChild(pageBtn);
     }
@@ -104,14 +102,14 @@ function renderPaginationControls(totalClubs, currentPage) {
         if (currentPage > 1) {
             currentPage--;
             filterClubs(currentFilter, currentPage);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            smoothScroll('categories');
         }
     };
     nextBtn.onclick = () => {
         if (currentPage < totalPages) {
             currentPage++;
             filterClubs(currentFilter, currentPage);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            smoothScroll('categories');
         }
     };
 }
@@ -194,9 +192,9 @@ function renderAccordion() {
 // FILTER & SEARCH FUNCTIONS
 // ============================================
 
-function filterClubs(category) {
+function filterClubs(category, page = 1) {
     currentFilter = category;
-    currentPage = 1;
+    currentPage = page;
 
     // Update active filter chip
     document.querySelectorAll('.filter-chip').forEach(chip => {
@@ -207,7 +205,7 @@ function filterClubs(category) {
     });
 
     // Render filtered clubs
-    renderClubs(category, 1);
+    renderClubs(category, currentPage);
 }
 
 function nextPage() {
@@ -276,6 +274,7 @@ function renderClubGallery(club) {
         img.src = club.image;
         img.alt = club.name;
         img.className = 'carousel-image';
+        img.onclick = () => showFullScreenImage(img.src);
         carouselImages.appendChild(img);
 
         const dot = document.createElement('div');
@@ -289,6 +288,7 @@ function renderClubGallery(club) {
             img.alt = `${club.name} ${index + 1}`;
             img.className = 'carousel-image';
             img.style.display = index === 0 ? 'block' : 'none';
+            img.onclick = () => showFullScreenImage(imgUrl);
             carouselImages.appendChild(img);
 
             const dot = document.createElement('div');
@@ -296,7 +296,42 @@ function renderClubGallery(club) {
             dot.onclick = () => selectGalleryImage(index);
             carouselDots.appendChild(dot);
         });
+        
+        // Add swipe gesture support
+        setupSwipeGestures(carouselImages);
     }
+}
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+function setupSwipeGestures(element) {
+    element.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+
+    element.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipeGesture();
+    }, {passive: true});
+}
+
+function handleSwipeGesture() {
+    if (touchEndX < touchStartX - 50) nextGalleryImage();
+    if (touchEndX > touchStartX + 50) prevGalleryImage();
+}
+
+function showFullScreenImage(src) {
+    let overlay = document.getElementById('fullscreenImageOverlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'fullscreenImageOverlay';
+        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
+        overlay.onclick = () => document.body.removeChild(overlay);
+        document.body.appendChild(overlay);
+    }
+    overlay.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;object-fit:contain;">`;
+    document.body.appendChild(overlay);
 }
 
 function selectGalleryImage(index) {
@@ -435,12 +470,19 @@ function closeMobileMenu() {
 // CAROUSEL FUNCTIONS
 // ============================================
 
+function getVisibleCardsCount() {
+    if (window.innerWidth <= 480) return 1;
+    if (window.innerWidth <= 768) return 2;
+    return 3;
+}
+
 function nextTopClub() {
     const track = document.getElementById('carouselTrack');
     const cards = track.querySelectorAll('.top-club-card');
     if (cards.length === 0) return;
 
-    currentCarouselIndex = (currentCarouselIndex + 1) % cards.length;
+    const maxIndex = Math.max(0, cards.length - getVisibleCardsCount());
+    currentCarouselIndex = currentCarouselIndex >= maxIndex ? 0 : currentCarouselIndex + 1;
     updateCarouselPosition();
 }
 
@@ -449,7 +491,8 @@ function prevTopClub() {
     const cards = track.querySelectorAll('.top-club-card');
     if (cards.length === 0) return;
 
-    currentCarouselIndex = (currentCarouselIndex - 1 + cards.length) % cards.length;
+    const maxIndex = Math.max(0, cards.length - getVisibleCardsCount());
+    currentCarouselIndex = currentCarouselIndex <= 0 ? maxIndex : currentCarouselIndex - 1;
     updateCarouselPosition();
 }
 
@@ -495,7 +538,7 @@ function smoothScroll(sectionId) {
 }
 
 function handleLogin() {
-    alert('Đăng nhập feature sẽ được phát triển tiếp theo!');
+    showNotification('Tính năng Đăng nhập sẽ ra mắt trong Phase tiếp theo. Vui lòng quay lại sau!');
 }
 
 // ============================================
