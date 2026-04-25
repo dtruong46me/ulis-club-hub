@@ -9,13 +9,36 @@ let selectedClub = null;
 let currentPage = 1;
 let clubsPerPage = window.innerWidth <= 480 ? 3 : 9; // 3x3 grid or 3x1 on mobile
 
+let clubsData = [];
+let reviewsData = [];
+let tipsData = [];
+
+// Load JSON data
+async function loadData() {
+    try {
+        const [clubsRes, reviewsRes, tipsRes] = await Promise.all([
+            fetch('assets/data/clubs.json'),
+            fetch('assets/data/reviews.json'),
+            fetch('assets/data/tips.json')
+        ]);
+        
+        clubsData = await clubsRes.json();
+        reviewsData = await reviewsRes.json();
+        tipsData = await tipsRes.json();
+        
+        filterClubs('all');
+        renderTopClubs();
+        renderReviews();
+        renderAccordion();
+        setupEventListeners();
+        setupBackToTopButton();
+    } catch (error) {
+        console.error('Error loading data:', error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    filterClubs('all');
-    renderTopClubs();
-    renderReviews();
-    renderAccordion();
-    setupEventListeners();
-    setupBackToTopButton();
+    loadData();
 });
 
 // ============================================
@@ -55,18 +78,19 @@ function createClubCard(club) {
         openClubModal(club.id);
     };
 
-    const statusText = club.status ? 'Đang tuyển TV' : 'Đóng form';
-    const statusClass = club.status ? 'status-open' : 'status-closed';
+    // Truncate club name if too long
+    const maxNameLength = 30;
+    const displayName = club.name.length > maxNameLength 
+        ? club.name.substring(0, maxNameLength) + '...' 
+        : club.name;
 
     card.innerHTML = `
         <img src="${club.image}" alt="${club.name}" class="club-card-image">
         <div class="club-card-body">
-            <div class="club-card-status">
-                <span class="status-badge ${statusClass}"></span>
-                <span>${statusText}</span>
+            <h3 class="club-card-title" title="${club.name}">${displayName}</h3>
+            <div class="club-card-footer">
+                <span class="club-card-tag">#${club.tag}</span>
             </div>
-            <h3 class="club-card-title">${club.name}</h3>
-            <p class="club-card-description">${club.shortDescription || club.description}</p>
         </div>
     `;
 
@@ -115,7 +139,7 @@ function renderPaginationControls(totalClubs, currentPage) {
 }
 
 function renderTopClubs() {
-    const topClubs = clubsData.filter(club => club.rating >= 4.7).slice(0, 6);
+    const topClubs = clubsData.filter(club => club.category === 'featured').slice(0, 6);
     const carouselTrack = document.getElementById('carouselTrack');
     carouselTrack.innerHTML = '';
 
@@ -125,13 +149,8 @@ function renderTopClubs() {
         card.innerHTML = `
             <img src="${club.image}" alt="${club.name}" class="top-club-card-image">
             <div class="top-club-card-overlay">
-                <div class="top-club-card-badge">🏆 Top ${club.category}</div>
+                <div class="top-club-card-badge">⭐ Featured</div>
                 <h3 class="top-club-card-title">${club.name}</h3>
-                <div class="top-club-card-info">
-                    <span>⭐ ${club.rating}</span>
-                    <span>👥 ${club.members} thành viên</span>
-                    <span>📅 ${club.years} năm</span>
-                </div>
             </div>
         `;
         card.onclick = () => openClubModal(club.id);
@@ -235,15 +254,28 @@ function openClubModal(clubId) {
     currentGalleryIndex = 0;
 
     // Populate modal with club data
-    document.getElementById('modalClubImage').src = club.backgroundImage || club.image;
+    document.getElementById('modalClubImage').src = club.image;
     document.getElementById('modalClubName').textContent = club.name;
-    document.getElementById('modalClubDescription').textContent = club.fullDescription || club.description;
-    document.getElementById('modalClubPresident').textContent = club.president || 'N/A';
-    document.getElementById('modalClubVicePresident').textContent = club.vicePresident || 'N/A';
-    document.getElementById('modalClubSchedule').textContent = club.schedule;
-    document.getElementById('modalClubActivities').textContent = club.activities;
-    document.getElementById('modalClubRequirements').textContent = club.requirements;
-    document.getElementById('modalClubBenefits').textContent = club.benefits;
+    document.getElementById('modalClubDescription').textContent = club.description;
+    
+    // Handle fanpage link (create link from URL)
+    if (club.fanpage) {
+        const fanpageLink = `<strong>📱 Fanpage:</strong> <a href="${club.fanpage}" target="_blank" class="fanpage-link">${club.name}</a>`;
+        document.getElementById('modalClubFanpage').innerHTML = fanpageLink;
+    } else {
+        document.getElementById('modalClubFanpage').innerHTML = '';
+    }
+    
+    // Handle structure
+    document.getElementById('modalClubStructure').innerHTML = club.structure ? club.structure.replace(/\n/g, '<br>') : 'N/A';
+    
+    // Handle recruitment time
+    document.getElementById('modalClubRecruitmentTime').innerHTML = club.recruitmentTime ? club.recruitmentTime.replace(/\n/g, '<br>') : 'N/A';
+    
+    document.getElementById('modalClubSchedule').innerHTML = club.schedule ? club.schedule.replace(/\n/g, '<br>') : 'N/A';
+    document.getElementById('modalClubActivities').innerHTML = club.activities ? club.activities.replace(/\n/g, '<br>') : 'N/A';
+    document.getElementById('modalClubRequirements').innerHTML = club.requirements ? club.requirements.replace(/\n/g, '<br>') : 'N/A';
+    document.getElementById('modalClubBenefits').innerHTML = club.benefits ? club.benefits.replace(/\n/g, '<br>') : 'N/A';
     document.getElementById('modalFormLink').href = club.formLink;
 
     // Render gallery
@@ -255,6 +287,7 @@ function openClubModal(clubId) {
     document.body.style.overflow = 'hidden';
 }
 
+
 function closeClubModal() {
     const modal = document.getElementById('clubModal');
     modal.classList.remove('active');
@@ -264,24 +297,17 @@ function closeClubModal() {
 function renderClubGallery(club) {
     const carouselImages = document.getElementById('carouselImages');
     const carouselDots = document.getElementById('carouselDots');
+    const imageCarousel = document.getElementById('imageCarousel');
 
     carouselImages.innerHTML = '';
     carouselDots.innerHTML = '';
 
     if (!club.galleryImages || club.galleryImages.length === 0) {
-        // If no gallery, show main image
-        const img = document.createElement('img');
-        img.src = club.image;
-        img.alt = club.name;
-        img.className = 'carousel-image';
-        img.onclick = () => showFullScreenImage(img.src);
-        carouselImages.appendChild(img);
-
-        const dot = document.createElement('div');
-        dot.className = 'carousel-dot active';
-        carouselDots.appendChild(dot);
+        // Hide gallery carousel section when no images
+        imageCarousel.style.display = 'none';
     } else {
         // Show gallery images
+        imageCarousel.style.display = 'block';
         club.galleryImages.forEach((imgUrl, index) => {
             const img = document.createElement('img');
             img.src = imgUrl;

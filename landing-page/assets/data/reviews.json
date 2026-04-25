@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "author": "Ẩn danh",
+        "clubId": 1,
+        "rating": 5,
+        "text": "PSC giúp tôi vượt qua nỗi sợ. Từ rụt rè, tôi tự tin thuyết trình!"
+    },
+    {
+        "id": 2,
+        "author": "Ẩn danh",
+        "clubId": 2,
+        "rating": 5,
+        "text": "Không gian ấm áp. Mỗi buổi đều mang góc nhìn mới!"
+    },
+    {
+        "id": 3,
+        "author": "Ẩn danh",
+        "clubId": 3,
+        "rating": 4,
+        "text": "ETIC cung cấp thực hành dịch thuật thực tế. Kinh nghiệm quý báu!"
+    },
+    {
+        "id": 4,
+        "author": "Ẩn danh",
+        "clubId": 4,
+        "rating": 4,
+        "text": "ULIS IT tuyệt vời. Tôi học được rất nhiều kỹ năng!"
+    },
+    {
+        "id": 5,
+        "author": "Ẩn danh",
+        "clubId": 11,
+        "rating": 5,
+        "text": "Toastmasters thay đổi cuộc sống tôi. Từ sợ đến Competent Leader!"
+    },
+    {
+        "id": 6,
+        "author": "Ẩn danh",
+        "clubId": 12,
+        "rating": 5,
+        "text": "Startup Club validate ý tưởng. Giờ phát triển startup thực tế!"
+    },
+    {
+        "id": 7,
+        "author": "Ẩn danh",
+        "clubId": 13,
+        "rating": 5,
+        "text": "Photography Club tuyệt vời. Portfolio phát triển rất nhanh!"
+    },
+    {
+        "id": 8,
+        "author": "Ẩn danh",
+        "clubId": 14,
+        "rating": 4,
+        "text": "Debate Club phát triển tư duy. Tôi tự tin trong tranh luận!"
+    },
+    {
+        "id": 9,
+        "author": "Ẩn danh",
+        "clubId": 15,
+        "rating": 5,
+        "text": "Innovation Lab xử lý vấn đề thực tế. Mentorship từ chuyên gia!"
+    }
+]

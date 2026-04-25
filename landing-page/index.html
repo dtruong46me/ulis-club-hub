@@ -87,17 +87,8 @@
                 <button class="filter-chip" data-category="academic" onclick="filterClubs('academic')">
                     📚 Học thuật
                 </button>
-                <button class="filter-chip" data-category="skill" onclick="filterClubs('skill')">
-                    🎯 Kỹ năng
-                </button>
-                <button class="filter-chip" data-category="art" onclick="filterClubs('art')">
-                    🎨 Nghệ thuật
-                </button>
-                <button class="filter-chip" data-category="sport" onclick="filterClubs('sport')">
-                    ⚽ Thể thao
-                </button>
-                <button class="filter-chip" data-category="volunteer" onclick="filterClubs('volunteer')">
-                    🤝 Tình nguyện
+                <button class="filter-chip" data-category="featured" onclick="filterClubs('featured')">
+                    ⭐ Nổi bật
                 </button>
             </div>
 
@@ -219,12 +210,12 @@
                 <h2 id="modalClubName"></h2>
                 
                 <div class="modal-section">
-                    <h3>📝 Giới Thiệu</h3>
+                    <h3>Giới Thiệu</h3>
                     <p id="modalClubDescription"></p>
                 </div>
 
                 <div class="modal-section">
-                    <h3>📷 Góc Nhìn Hoạt Động Của CLB</h3>
+                    <h3>Góc Nhìn Hoạt Động Của CLB</h3>
                     <div class="image-carousel" id="imageCarousel">
                         <div class="carousel-images" id="carouselImages"></div>
                         <div class="carousel-dots" id="carouselDots"></div>
@@ -234,14 +225,18 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3>👔 Lãnh Đạo & Các Ban</h3>
-                    <p><strong>Chủ nhiệm/Liên hệ:</strong> <span id="modalClubPresident"></span></p>
-                    <p><strong>Phó Chủ nhiệm:</strong> <span id="modalClubVicePresident"></span></p>
-                    <p><strong>Các ban chuyên môn:</strong> <span>Ban Truyền thông, Ban Sự kiện, Ban Hậu cần</span></p>
+                    <h3>Liên Hệ & Cấu Trúc</h3>
+                    <p id="modalClubFanpage"></p>
+                    <p><strong>Cơ cấu tổ chức:</strong> <span id="modalClubStructure"></span></p>
                 </div>
 
                 <div class="modal-section">
-                    <h3>🕒 Lịch sinh hoạt</h3>
+                    <h3>� Thời gian tuyển thành viên</h3>
+                    <p id="modalClubRecruitmentTime"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>�🕒 Lịch sinh hoạt</h3>
                     <p id="modalClubSchedule"></p>
                 </div>
                 

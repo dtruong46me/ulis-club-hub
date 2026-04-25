@@ -451,6 +451,16 @@ section {
     width: fit-content;
 }
 
+.club-card-category {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    width: fit-content;
+}
+
 .status-badge {
     display: inline-block;
     width: 12px;
@@ -487,6 +497,23 @@ section {
 
 .club-card-button {
     align-self: flex-start;
+}
+
+.club-card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.club-card-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 /* ============================================
@@ -1709,6 +1736,36 @@ section {
 
 .text-light {
     color: var(--text-light);
+}
+
+/* Fanpage Link Styling */
+.fanpage-link {
+    color: #1877f2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.fanpage-link:hover {
+    color: #0a66c2;
+    text-decoration: underline;
+}
+
+/* Category Badge */
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+.category-badge:hover {
+    transform: scale(1.05);
 }
 
 /* ============================================
