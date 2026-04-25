@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CLB Hub - Hệ thống tìm kiếm và đăng ký câu lạc bộ thông minh dành cho sinh viên ULIS">
+    <meta name="description"
+        content="CLB Hub - Hệ thống tìm kiếm và đăng ký câu lạc bộ thông minh dành cho sinh viên ULIS">
     <title>CLB Hub - Ghép Đôi CLB: Bến ĐỖ Thanh Xuân Của Bạn</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
     <!-- Navigation Bar (Sticky) -->
     <nav class="navbar">
@@ -48,7 +51,8 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background">
-            <video autoplay muted loop playsinline class="hero-video" poster="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=900&fit=crop">
+            <video autoplay muted loop playsinline class="hero-video"
+                poster="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=900&fit=crop">
                 <source src="assets/images/hero-background.mp4" type="video/mp4">
             </video>
             <div class="hero-overlay"></div>
@@ -56,9 +60,9 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">CLB HUB - GHÉP ĐÔI CLB</h1>
-                <p class="hero-subtitle">Bến đỖ thanh xuân của bạn</p>
+                <p class="hero-subtitle">Bến đỗ thanh xuân của bạn</p>
                 <p class="hero-description">
-                    Hệ thống đề xuất và tìm kiếm câu lạc bộ thông minh dành riêng cho sinh viên ULIS. 
+                    Hệ thống đề xuất và tìm kiếm câu lạc bộ thông minh dành riêng cho sinh viên ULIS.
                     Khám phá cộng đồng phù hợp với bạn dựa trên sở thích, ngành học và thời gian của bạn.
                 </p>
                 <div class="hero-buttons">
@@ -68,7 +72,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop" alt="CLB Activities Illustration" class="hero-img">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=600&fit=crop"
+                    alt="CLB Activities Illustration" class="hero-img">
             </div>
         </div>
     </section>
@@ -78,7 +83,7 @@
         <div class="container">
             <h2 class="section-title">Khám phá hệ sinh thái CLB</h2>
             <p class="section-subtitle">Tìm kiếm câu lạc bộ theo sở thích của bạn</p>
-            
+
             <!-- Filter Chips -->
             <div class="filter-container">
                 <button class="filter-chip active" data-category="all" onclick="filterClubs('all')">
@@ -111,7 +116,7 @@
         <div class="container">
             <h2 class="section-title">🏆 Bảng Vàng CLB</h2>
             <p class="section-subtitle">Những câu lạc bộ được yêu thích nhất</p>
-            
+
             <div class="carousel-container">
                 <button class="carousel-btn prev" onclick="prevTopClub()">❮</button>
                 <div class="carousel-wrapper">
@@ -129,7 +134,7 @@
         <div class="container">
             <h2 class="section-title">Review thật từ "Người trong cuộc"</h2>
             <p class="section-subtitle">Nghe chia sẻ từ các thành viên CLB</p>
-            
+
             <div class="reviews-masonry" id="reviewsMasonry">
                 <!-- Reviews will be dynamically inserted here -->
             </div>
@@ -141,7 +146,7 @@
         <div class="container">
             <h2 class="section-title">Hành trang "Nhập môn" CLB</h2>
             <p class="section-subtitle">Những lời khuyên hữu ích từ các cựu thành viên</p>
-            
+
             <div class="accordion-container">
                 <!-- Accordion items will be dynamically inserted here -->
             </div>
@@ -154,7 +159,7 @@
             <div class="footer-message">
                 <h3>Một lời từ team CLB Hub</h3>
                 <p>
-                    Chúng tôi tạo ra CLB Hub vì tin rằng mỗi sinh viên xứng đáng tìm thấy cộng đồng 
+                    Chúng tôi tạo ra CLB Hub vì tin rằng mỗi sinh viên xứng đáng tìm thấy cộng đồng
                     của riêng mình - nơi họ có thể phát triển, học hỏi và tạo nên những kỷ niệm tuyệt vời.
                 </p>
             </div>
@@ -202,14 +207,14 @@
         <div class="modal-overlay" onclick="closeClubModal()"></div>
         <div class="modal-content club-modal" id="modalContentScroll">
             <button class="modal-close" onclick="closeClubModal()">✕</button>
-            
+
             <div class="modal-parallax-bg" id="modalParallaxBg">
                 <img id="modalClubImage" src="" alt="Club Background" class="modal-bg-image">
             </div>
 
             <div class="modal-body">
                 <h2 id="modalClubName"></h2>
-                
+
                 <div id="sectionIntroduction" class="modal-section">
                     <h3>Giới thiệu</h3>
                     <p id="modalClubDescription"></p>
@@ -238,7 +243,7 @@
                     <h3>Lịch sinh hoạt</h3>
                     <p id="modalClubSchedule"></p>
                 </div>
-                
+
                 <div id="sectionActivities" class="modal-section">
                     <h3>Hoạt động tiêu biểu</h3>
                     <p id="modalClubActivities"></p>
@@ -253,12 +258,12 @@
                     <h3>Thông tin tuyển thành viên</h3>
                     <p id="modalClubRecruitment"></p>
                 </div>
-                
+
                 <div id="sectionRequirements" class="modal-section warning-box">
                     <h3>💡 Yêu cầu</h3>
                     <p id="modalClubRequirements"></p>
                 </div>
-                
+
                 <div id="sectionBenefits" class="modal-section success-box">
                     <h3>🎁 Quyền lợi</h3>
                     <p id="modalClubBenefits"></p>
@@ -327,4 +332,5 @@
     <script src="assets/js/data.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
