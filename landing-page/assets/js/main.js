@@ -21,11 +21,11 @@ async function loadData() {
             fetch('assets/data/reviews.json'),
             fetch('assets/data/tips.json')
         ]);
-        
+
         clubsData = await clubsRes.json();
         reviewsData = await reviewsRes.json();
         tipsData = await tipsRes.json();
-        
+
         filterClubs('all');
         renderTopClubs();
         renderReviews();
@@ -80,10 +80,10 @@ function createClubCard(club) {
 
     // Truncate club name if too long
     const maxNameLength = 30;
-    const displayName = club.club_name.length > maxNameLength 
-        ? club.club_name.substring(0, maxNameLength) + '...' 
+    const displayName = club.club_name.length > maxNameLength
+        ? club.club_name.substring(0, maxNameLength) + '...'
         : club.club_name;
-        
+
     const firstTag = (club.tags && club.tags.length > 0) ? club.tags[0] : '';
 
     card.innerHTML = `
@@ -267,7 +267,7 @@ function openClubModal(clubId) {
     // Populate modal with club data
     document.getElementById('modalClubImage').src = club.bg_image || '';
     document.getElementById('modalClubName').textContent = club.club_name;
-    
+
     setSection('sectionIntroduction', club.introduction, 'modalClubDescription');
     setSection('sectionContact', club.contact, 'modalClubContact');
     setSection('sectionStructure', club.structure, 'modalClubStructure');
@@ -293,7 +293,7 @@ function openClubModal(clubId) {
     const modal = document.getElementById('clubModal');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    
+
     // Reset scroll
     const scrollContent = document.getElementById('modalContentScroll');
     if (scrollContent) scrollContent.scrollTop = 0;
@@ -334,7 +334,7 @@ function renderClubGallery(club) {
             dot.onclick = () => selectGalleryImage(index);
             carouselDots.appendChild(dot);
         });
-        
+
         // Add swipe gesture support
         setupSwipeGestures(carouselImages);
     }
@@ -346,12 +346,12 @@ let touchEndX = 0;
 function setupSwipeGestures(element) {
     element.addEventListener('touchstart', e => {
         touchStartX = e.changedTouches[0].screenX;
-    }, {passive: true});
+    }, { passive: true });
 
     element.addEventListener('touchend', e => {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipeGesture();
-    }, {passive: true});
+    }, { passive: true });
 }
 
 function handleSwipeGesture() {
@@ -364,40 +364,40 @@ let fullscreenCurrentIndex = 0;
 function showFullScreenImage(index) {
     if (!selectedClub || !selectedClub.images || selectedClub.images.length === 0) return;
     fullscreenCurrentIndex = index;
-    
+
     let overlay = document.getElementById('fullscreenImageOverlay');
     if (!overlay) {
         overlay = document.createElement('div');
         overlay.id = 'fullscreenImageOverlay';
         overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;';
-        
+
         const closeBtn = document.createElement('button');
         closeBtn.innerHTML = '✕';
         closeBtn.style.cssText = 'position:absolute;top:20px;right:20px;background:none;border:none;color:white;font-size:2rem;cursor:pointer;z-index:10001;';
         closeBtn.onclick = () => document.body.removeChild(overlay);
-        
+
         const prevBtn = document.createElement('button');
         prevBtn.innerHTML = '❮';
         prevBtn.style.cssText = 'position:absolute;left:20px;background:rgba(255,255,255,0.2);border:none;color:white;font-size:3rem;cursor:pointer;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;z-index:10001;';
         prevBtn.onclick = (e) => { e.stopPropagation(); navigateFullscreen(-1); };
-        
+
         const nextBtn = document.createElement('button');
         nextBtn.innerHTML = '❯';
         nextBtn.style.cssText = 'position:absolute;right:20px;background:rgba(255,255,255,0.2);border:none;color:white;font-size:3rem;cursor:pointer;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;z-index:10001;';
         nextBtn.onclick = (e) => { e.stopPropagation(); navigateFullscreen(1); };
-        
+
         const imgContainer = document.createElement('div');
         imgContainer.id = 'fullscreenImageContainer';
         imgContainer.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;';
         imgContainer.onclick = () => document.body.removeChild(overlay);
-        
+
         overlay.appendChild(closeBtn);
         overlay.appendChild(prevBtn);
         overlay.appendChild(nextBtn);
         overlay.appendChild(imgContainer);
         document.body.appendChild(overlay);
     }
-    
+
     updateFullscreenImage();
 }
 
@@ -493,7 +493,7 @@ function submitQuiz() {
 
     // Filter clubs by selected interest
     const filteredClubs = clubsData.filter(club => club.category && club.category.includes(interest.value));
-    
+
     // Close quiz modal
     closeQuizModal();
 
@@ -715,15 +715,15 @@ function setupEventListeners() {
     const modalBody = document.querySelector('#modalContentScroll .modal-body');
     const modalBg = document.getElementById('modalParallaxBg');
     const modalBgImage = document.getElementById('modalClubImage');
-    
+
     if (modalBody && modalBg && modalBgImage) {
         modalBody.addEventListener('scroll', () => {
             const scrollTop = modalBody.scrollTop;
-            
+
             // Adjust height (min 150px, max 300px)
             const newHeight = Math.max(150, 300 - scrollTop);
             modalBg.style.height = newHeight + 'px';
-            
+
             // Adjust zoom: stop zooming when height stops decreasing (scrollTop >= 150)
             const zoomScrollTop = Math.min(150, scrollTop);
             const scale = Math.max(1, 1 + (zoomScrollTop / 800));
@@ -737,18 +737,30 @@ function setupEventListeners() {
         link.addEventListener('click', closeMobileMenu);
     });
 
-    // Add scroll behavior to navbar
+    // Add scroll behavior to navbar and hero parallax
     let lastScrollTop = 0;
+    const heroVideo = document.querySelector('.hero-video');
+
     window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset;
+
         const navbar = document.querySelector('.navbar');
         if (navbar) {
-            if (window.pageYOffset > 100) {
+            if (scrollTop > 100) {
                 navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
             } else {
                 navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
             }
         }
-        lastScrollTop = window.pageYOffset;
+
+        // Hero parallax zoom
+        if (heroVideo && scrollTop <= window.innerHeight) {
+            // Zoom up to 1.2x based on scroll position relative to window height
+            const scale = 1 + Math.min(0.3, (scrollTop / window.innerHeight) * 0.3);
+            heroVideo.style.transform = `scale(${scale})`;
+        }
+
+        lastScrollTop = scrollTop;
     });
 
     // Lazy loading for images (if needed)
