@@ -96,6 +96,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: var(--spacing-md);
 }
 
 .logo {
@@ -112,6 +113,7 @@ a {
 
 .logo-text {
     color: var(--primary-color);
+    white-space: nowrap;
 }
 
 .navbar-center {
@@ -132,6 +134,7 @@ a {
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -1437,6 +1440,24 @@ section {
     padding: var(--spacing-md);
     background: var(--bg-light);
     border-radius: 8px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - LAPTOP/TABLET LANDSCAPE (1024px)
+   ============================================ */
+
+@media (max-width: 1050px) {
+    .navbar-center {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none !important;
+    }
 }
 
 /* ============================================
