@@ -84,10 +84,10 @@
                 <button class="filter-chip active" data-category="all" onclick="filterClubs('all')">
                     Tất cả
                 </button>
-                <button class="filter-chip" data-category="academic" onclick="filterClubs('academic')">
+                <button class="filter-chip" data-category="Học thuật" onclick="filterClubs('Học thuật')">
                     📚 Học thuật
                 </button>
-                <button class="filter-chip" data-category="featured" onclick="filterClubs('featured')">
+                <button class="filter-chip" data-category="Nổi bật" onclick="filterClubs('Nổi bật')">
                     ⭐ Nổi bật
                 </button>
             </div>
@@ -200,22 +200,27 @@
     <!-- Club Detail Modal -->
     <div id="clubModal" class="modal">
         <div class="modal-overlay" onclick="closeClubModal()"></div>
-        <div class="modal-content club-modal">
+        <div class="modal-content club-modal" id="modalContentScroll">
             <button class="modal-close" onclick="closeClubModal()">✕</button>
-            <div class="modal-header">
-                <img id="modalClubImage" src="" alt="Club" class="modal-image">
-                <div id="modalClubLogo" class="modal-logo">📚</div>
+            
+            <div class="modal-parallax-bg" id="modalParallaxBg">
+                <img id="modalClubImage" src="" alt="Club Background" class="modal-bg-image">
             </div>
+
             <div class="modal-body">
                 <h2 id="modalClubName"></h2>
                 
-                <div class="modal-section">
-                    <h3>Giới Thiệu</h3>
+                <div id="sectionIntroduction" class="modal-section">
+                    <h3>Giới thiệu</h3>
                     <p id="modalClubDescription"></p>
                 </div>
 
-                <div class="modal-section">
-                    <h3>Góc Nhìn Hoạt Động Của CLB</h3>
+                <div id="sectionContact" class="modal-section">
+                    <h4>Liên hệ</h4>
+                    <p id="modalClubContact"></p>
+                </div>
+
+                <div id="sectionGallery" class="modal-section">
                     <div class="image-carousel" id="imageCarousel">
                         <div class="carousel-images" id="carouselImages"></div>
                         <div class="carousel-dots" id="carouselDots"></div>
@@ -224,45 +229,48 @@
                     </div>
                 </div>
 
-                <div class="modal-section">
-                    <h3>Liên Hệ & Cấu Trúc</h3>
-                    <p id="modalClubFanpage"></p>
-                    <p><strong>Cơ cấu tổ chức:</strong> <span id="modalClubStructure"></span></p>
+                <div id="sectionStructure" class="modal-section">
+                    <h3>Cơ cấu tổ chức</h3>
+                    <p id="modalClubStructure"></p>
                 </div>
 
-                <div class="modal-section">
-                    <h3>� Thời gian tuyển thành viên</h3>
-                    <p id="modalClubRecruitmentTime"></p>
-                </div>
-
-                <div class="modal-section">
-                    <h3>�🕒 Lịch sinh hoạt</h3>
+                <div id="sectionSchedule" class="modal-section">
+                    <h3>Lịch sinh hoạt</h3>
                     <p id="modalClubSchedule"></p>
                 </div>
                 
-                <div class="modal-section">
-                    <h3>🎯 Hoạt động tiêu biểu</h3>
+                <div id="sectionActivities" class="modal-section">
+                    <h3>Hoạt động tiêu biểu</h3>
                     <p id="modalClubActivities"></p>
                 </div>
+
+                <div id="sectionAdditional" class="modal-section">
+                    <h3>Bổ sung</h3>
+                    <p id="modalClubAdditional"></p>
+                </div>
+
+                <div id="sectionRecruitment" class="modal-section">
+                    <h3>Thông tin tuyển thành viên</h3>
+                    <p id="modalClubRecruitment"></p>
+                </div>
                 
-                <div class="modal-section warning-box">
+                <div id="sectionRequirements" class="modal-section warning-box">
                     <h3>💡 Yêu cầu</h3>
                     <p id="modalClubRequirements"></p>
                 </div>
                 
-                <div class="modal-section success-box">
+                <div id="sectionBenefits" class="modal-section success-box">
                     <h3>🎁 Quyền lợi</h3>
                     <p id="modalClubBenefits"></p>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" id="sectionFormLink">
                 <a id="modalFormLink" href="#" class="btn-primary btn-full-width" target="_blank">
-                    ✍️ Điền Form Đăng Ký Phỏng Vấn
+                    ✍️ Điền Form Đăng Ký
                 </a>
             </div>
         </div>
     </div>
-
     <!-- Review Modal -->
     <div id="reviewModal" class="modal">
         <div class="modal-overlay" onclick="closeReviewModal()"></div>
@@ -296,11 +304,11 @@
                 <div class="quiz-question">
                     <label>Bạn quan tâm nhất đến lĩnh vực nào?</label>
                     <div class="quiz-options">
-                        <label><input type="radio" name="interest" value="academic"> Học thuật</label>
-                        <label><input type="radio" name="interest" value="skill"> Kỹ năng mềm</label>
-                        <label><input type="radio" name="interest" value="art"> Nghệ thuật</label>
-                        <label><input type="radio" name="interest" value="sport"> Thể thao</label>
-                        <label><input type="radio" name="interest" value="volunteer"> Tình nguyện</label>
+                        <label><input type="radio" name="interest" value="Học thuật"> Học thuật</label>
+                        <label><input type="radio" name="interest" value="Kỹ năng"> Kỹ năng mềm</label>
+                        <label><input type="radio" name="interest" value="Nghệ thuật"> Nghệ thuật</label>
+                        <label><input type="radio" name="interest" value="Thể thao"> Thể thao</label>
+                        <label><input type="radio" name="interest" value="Tình nguyện"> Tình nguyện</label>
                     </div>
                 </div>
             </div>

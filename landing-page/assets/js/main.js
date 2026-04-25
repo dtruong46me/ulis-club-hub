@@ -51,7 +51,7 @@ function renderClubs(category, page = 1) {
 
     let filteredClubs = clubsData;
     if (category !== 'all') {
-        filteredClubs = clubsData.filter(club => club.category === category);
+        filteredClubs = clubsData.filter(club => club.category && club.category.includes(category));
     }
 
     // Pagination
@@ -80,16 +80,18 @@ function createClubCard(club) {
 
     // Truncate club name if too long
     const maxNameLength = 30;
-    const displayName = club.name.length > maxNameLength 
-        ? club.name.substring(0, maxNameLength) + '...' 
-        : club.name;
+    const displayName = club.club_name.length > maxNameLength 
+        ? club.club_name.substring(0, maxNameLength) + '...' 
+        : club.club_name;
+        
+    const firstTag = (club.tags && club.tags.length > 0) ? club.tags[0] : '';
 
     card.innerHTML = `
-        <img src="${club.image}" alt="${club.name}" class="club-card-image">
+        <img src="${club.bg_image}" alt="${club.club_name}" class="club-card-image">
         <div class="club-card-body">
-            <h3 class="club-card-title" title="${club.name}">${displayName}</h3>
+            <h3 class="club-card-title" title="${club.club_name}">${displayName}</h3>
             <div class="club-card-footer">
-                <span class="club-card-tag">#${club.tag}</span>
+                <span class="club-card-tag">#${firstTag}</span>
             </div>
         </div>
     `;
@@ -115,7 +117,6 @@ function renderPaginationControls(totalClubs, currentPage) {
         pageBtn.onclick = () => {
             currentPage = i;
             filterClubs(currentFilter, i);
-            smoothScroll('categories');
         };
         pageNumbers.appendChild(pageBtn);
     }
@@ -126,20 +127,18 @@ function renderPaginationControls(totalClubs, currentPage) {
         if (currentPage > 1) {
             currentPage--;
             filterClubs(currentFilter, currentPage);
-            smoothScroll('categories');
         }
     };
     nextBtn.onclick = () => {
         if (currentPage < totalPages) {
             currentPage++;
             filterClubs(currentFilter, currentPage);
-            smoothScroll('categories');
         }
     };
 }
 
 function renderTopClubs() {
-    const topClubs = clubsData.filter(club => club.category === 'featured').slice(0, 6);
+    const topClubs = clubsData.filter(club => club.category && club.category.includes('Nổi bật')).slice(0, 6);
     const carouselTrack = document.getElementById('carouselTrack');
     carouselTrack.innerHTML = '';
 
@@ -147,10 +146,10 @@ function renderTopClubs() {
         const card = document.createElement('div');
         card.className = 'top-club-card';
         card.innerHTML = `
-            <img src="${club.image}" alt="${club.name}" class="top-club-card-image">
+            <img src="${club.bg_image}" alt="${club.club_name}" class="top-club-card-image">
             <div class="top-club-card-overlay">
                 <div class="top-club-card-badge">⭐ Featured</div>
-                <h3 class="top-club-card-title">${club.name}</h3>
+                <h3 class="top-club-card-title">${club.club_name}</h3>
             </div>
         `;
         card.onclick = () => openClubModal(club.id);
@@ -247,36 +246,45 @@ function prevPage() {
 // ============================================
 
 function openClubModal(clubId) {
-    const club = clubsData.find(c => c.id === clubId);
+    const club = clubsData.find(c => c.id == clubId);
     if (!club) return;
 
     selectedClub = club;
     currentGalleryIndex = 0;
 
+    // Helper to toggle section visibility
+    const setSection = (id, text, contentId = null) => {
+        const section = document.getElementById(id);
+        const contentEl = contentId ? document.getElementById(contentId) : null;
+        if (text && text.trim() !== '') {
+            section.style.display = 'block';
+            if (contentEl) contentEl.innerHTML = text.replace(/\n/g, '<br>');
+        } else {
+            section.style.display = 'none';
+        }
+    };
+
     // Populate modal with club data
-    document.getElementById('modalClubImage').src = club.image;
-    document.getElementById('modalClubName').textContent = club.name;
-    document.getElementById('modalClubDescription').textContent = club.description;
+    document.getElementById('modalClubImage').src = club.bg_image || '';
+    document.getElementById('modalClubName').textContent = club.club_name;
     
-    // Handle fanpage link (create link from URL)
-    if (club.fanpage) {
-        const fanpageLink = `<strong>📱 Fanpage:</strong> <a href="${club.fanpage}" target="_blank" class="fanpage-link">${club.name}</a>`;
-        document.getElementById('modalClubFanpage').innerHTML = fanpageLink;
+    setSection('sectionIntroduction', club.introduction, 'modalClubDescription');
+    setSection('sectionContact', club.contact, 'modalClubContact');
+    setSection('sectionStructure', club.structure, 'modalClubStructure');
+    setSection('sectionSchedule', club.meeting_schedule, 'modalClubSchedule');
+    setSection('sectionActivities', club.key_activities, 'modalClubActivities');
+    setSection('sectionAdditional', club.additional_info, 'modalClubAdditional');
+    setSection('sectionRecruitment', club.recruitment, 'modalClubRecruitment');
+    setSection('sectionRequirements', club.requirements, 'modalClubRequirements');
+    setSection('sectionBenefits', club.benefits, 'modalClubBenefits');
+
+    const formSection = document.getElementById('sectionFormLink');
+    if (club.formlink && club.formlink.trim() !== '') {
+        formSection.style.display = 'block';
+        document.getElementById('modalFormLink').href = club.formlink;
     } else {
-        document.getElementById('modalClubFanpage').innerHTML = '';
+        formSection.style.display = 'none';
     }
-    
-    // Handle structure
-    document.getElementById('modalClubStructure').innerHTML = club.structure ? club.structure.replace(/\n/g, '<br>') : 'N/A';
-    
-    // Handle recruitment time
-    document.getElementById('modalClubRecruitmentTime').innerHTML = club.recruitmentTime ? club.recruitmentTime.replace(/\n/g, '<br>') : 'N/A';
-    
-    document.getElementById('modalClubSchedule').innerHTML = club.schedule ? club.schedule.replace(/\n/g, '<br>') : 'N/A';
-    document.getElementById('modalClubActivities').innerHTML = club.activities ? club.activities.replace(/\n/g, '<br>') : 'N/A';
-    document.getElementById('modalClubRequirements').innerHTML = club.requirements ? club.requirements.replace(/\n/g, '<br>') : 'N/A';
-    document.getElementById('modalClubBenefits').innerHTML = club.benefits ? club.benefits.replace(/\n/g, '<br>') : 'N/A';
-    document.getElementById('modalFormLink').href = club.formLink;
 
     // Render gallery
     renderClubGallery(club);
@@ -285,6 +293,10 @@ function openClubModal(clubId) {
     const modal = document.getElementById('clubModal');
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    
+    // Reset scroll
+    const scrollContent = document.getElementById('modalContentScroll');
+    if (scrollContent) scrollContent.scrollTop = 0;
 }
 
 
@@ -302,19 +314,19 @@ function renderClubGallery(club) {
     carouselImages.innerHTML = '';
     carouselDots.innerHTML = '';
 
-    if (!club.galleryImages || club.galleryImages.length === 0) {
+    if (!club.images || club.images.length === 0) {
         // Hide gallery carousel section when no images
-        imageCarousel.style.display = 'none';
+        document.getElementById('sectionGallery').style.display = 'none';
     } else {
         // Show gallery images
-        imageCarousel.style.display = 'block';
-        club.galleryImages.forEach((imgUrl, index) => {
+        document.getElementById('sectionGallery').style.display = 'block';
+        club.images.forEach((imgUrl, index) => {
             const img = document.createElement('img');
             img.src = imgUrl;
-            img.alt = `${club.name} ${index + 1}`;
+            img.alt = `${club.club_name} ${index + 1}`;
             img.className = 'carousel-image';
             img.style.display = index === 0 ? 'block' : 'none';
-            img.onclick = () => showFullScreenImage(imgUrl);
+            img.onclick = () => showFullScreenImage(index);
             carouselImages.appendChild(img);
 
             const dot = document.createElement('div');
@@ -347,17 +359,60 @@ function handleSwipeGesture() {
     if (touchEndX > touchStartX + 50) prevGalleryImage();
 }
 
-function showFullScreenImage(src) {
+let fullscreenCurrentIndex = 0;
+
+function showFullScreenImage(index) {
+    if (!selectedClub || !selectedClub.images || selectedClub.images.length === 0) return;
+    fullscreenCurrentIndex = index;
+    
     let overlay = document.getElementById('fullscreenImageOverlay');
     if (!overlay) {
         overlay = document.createElement('div');
         overlay.id = 'fullscreenImageOverlay';
-        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer;';
-        overlay.onclick = () => document.body.removeChild(overlay);
+        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;';
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '✕';
+        closeBtn.style.cssText = 'position:absolute;top:20px;right:20px;background:none;border:none;color:white;font-size:2rem;cursor:pointer;z-index:10001;';
+        closeBtn.onclick = () => document.body.removeChild(overlay);
+        
+        const prevBtn = document.createElement('button');
+        prevBtn.innerHTML = '❮';
+        prevBtn.style.cssText = 'position:absolute;left:20px;background:rgba(255,255,255,0.2);border:none;color:white;font-size:3rem;cursor:pointer;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;z-index:10001;';
+        prevBtn.onclick = (e) => { e.stopPropagation(); navigateFullscreen(-1); };
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.innerHTML = '❯';
+        nextBtn.style.cssText = 'position:absolute;right:20px;background:rgba(255,255,255,0.2);border:none;color:white;font-size:3rem;cursor:pointer;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;z-index:10001;';
+        nextBtn.onclick = (e) => { e.stopPropagation(); navigateFullscreen(1); };
+        
+        const imgContainer = document.createElement('div');
+        imgContainer.id = 'fullscreenImageContainer';
+        imgContainer.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;';
+        imgContainer.onclick = () => document.body.removeChild(overlay);
+        
+        overlay.appendChild(closeBtn);
+        overlay.appendChild(prevBtn);
+        overlay.appendChild(nextBtn);
+        overlay.appendChild(imgContainer);
         document.body.appendChild(overlay);
     }
-    overlay.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;object-fit:contain;">`;
-    document.body.appendChild(overlay);
+    
+    updateFullscreenImage();
+}
+
+function navigateFullscreen(direction) {
+    if (!selectedClub || !selectedClub.images) return;
+    fullscreenCurrentIndex = (fullscreenCurrentIndex + direction + selectedClub.images.length) % selectedClub.images.length;
+    updateFullscreenImage();
+}
+
+function updateFullscreenImage() {
+    const imgContainer = document.getElementById('fullscreenImageContainer');
+    if (imgContainer && selectedClub && selectedClub.images) {
+        const src = selectedClub.images[fullscreenCurrentIndex];
+        imgContainer.innerHTML = `<img src="${src}" style="max-width:90%;max-height:90%;object-fit:contain;cursor:default;" onclick="event.stopPropagation()">`;
+    }
 }
 
 function selectGalleryImage(index) {
@@ -366,14 +421,14 @@ function selectGalleryImage(index) {
 }
 
 function nextGalleryImage() {
-    if (!selectedClub || !selectedClub.galleryImages) return;
-    currentGalleryIndex = (currentGalleryIndex + 1) % selectedClub.galleryImages.length;
+    if (!selectedClub || !selectedClub.images || selectedClub.images.length === 0) return;
+    currentGalleryIndex = (currentGalleryIndex + 1) % selectedClub.images.length;
     updateGalleryDisplay();
 }
 
 function prevGalleryImage() {
-    if (!selectedClub || !selectedClub.galleryImages) return;
-    currentGalleryIndex = (currentGalleryIndex - 1 + selectedClub.galleryImages.length) % selectedClub.galleryImages.length;
+    if (!selectedClub || !selectedClub.images || selectedClub.images.length === 0) return;
+    currentGalleryIndex = (currentGalleryIndex - 1 + selectedClub.images.length) % selectedClub.images.length;
     updateGalleryDisplay();
 }
 
@@ -437,7 +492,7 @@ function submitQuiz() {
     }
 
     // Filter clubs by selected interest
-    const filteredClubs = clubsData.filter(club => club.category === interest.value);
+    const filteredClubs = clubsData.filter(club => club.category && club.category.includes(interest.value));
     
     // Close quiz modal
     closeQuizModal();
@@ -655,6 +710,26 @@ function setupEventListeners() {
             closeMobileMenu();
         }
     });
+
+    // Parallax effect for modal background
+    const modalBody = document.querySelector('#modalContentScroll .modal-body');
+    const modalBg = document.getElementById('modalParallaxBg');
+    const modalBgImage = document.getElementById('modalClubImage');
+    
+    if (modalBody && modalBg && modalBgImage) {
+        modalBody.addEventListener('scroll', () => {
+            const scrollTop = modalBody.scrollTop;
+            
+            // Adjust height (min 150px, max 300px)
+            const newHeight = Math.max(150, 300 - scrollTop);
+            modalBg.style.height = newHeight + 'px';
+            
+            // Adjust zoom: stop zooming when height stops decreasing (scrollTop >= 150)
+            const zoomScrollTop = Math.min(150, scrollTop);
+            const scale = Math.max(1, 1 + (zoomScrollTop / 800));
+            modalBgImage.style.transform = `scale(${scale})`;
+        });
+    }
 
     // Close mobile menu when clicking on nav links
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
