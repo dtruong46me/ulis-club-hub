@@ -7,7 +7,7 @@ let currentCarouselIndex = 0;
 let currentGalleryIndex = 0;
 let selectedClub = null;
 let currentPage = 1;
-let clubsPerPage = window.innerWidth <= 480 ? 3 : 9; // 3x3 grid or 3x1 on mobile
+let clubsPerPage = window.innerWidth <= 480 ? 3 : 6; // 3x3 grid or 3x1 on mobile
 
 let clubsData = [];
 let reviewsData = [];
