@@ -164,19 +164,22 @@ a {
 
 .btn-primary,
 .btn-secondary,
-.btn-ghost {
+.btn-ghost,
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: var(--spacing-sm) var(--spacing-md);
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    text-decoration: none;
+    box-sizing: border-box;
+    line-height: 1.5;
     font-size: var(--font-size-base);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-xs);
-    white-space: nowrap;
 }
 
 .btn-primary {
@@ -213,6 +216,19 @@ a {
 
 .btn-ghost:hover {
     color: var(--primary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--text-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .btn-large {
@@ -350,11 +366,140 @@ section {
 }
 
 /* ============================================
+   BENEFITS SECTION
+   ============================================ */
+
+.benefits-section {
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.benefits-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+    position: relative;
+    text-align: left;
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-number {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 8rem;
+    font-weight: 900;
+    opacity: 0.04;
+    line-height: 1;
+    z-index: -1;
+    transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-number {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 0.08;
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+.benefit-title {
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.benefit-description {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Colors for specific cards */
+.card-blue {
+    background: linear-gradient(145deg, #f0f7ff, #e6f3ff);
+}
+.card-blue .benefit-action, .card-blue .benefit-icon { color: #0066cc; }
+
+.card-green {
+    background: linear-gradient(145deg, #f0fdf4, #dcfce7);
+}
+.card-green .benefit-action, .card-green .benefit-icon { color: #16a34a; }
+
+.card-yellow {
+    background: linear-gradient(145deg, #fffbeb, #fef3c7);
+}
+.card-yellow .benefit-action, .card-yellow .benefit-icon { color: #d97706; }
+
+.card-purple {
+    background: linear-gradient(145deg, #fdf4ff, #fae8ff);
+}
+.card-purple .benefit-action, .card-purple .benefit-icon { color: #c026d3; }
+
+.benefit-action {
+    margin-top: var(--spacing-lg);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.benefit-card:hover .benefit-action {
+    opacity: 1;
+    gap: 12px;
+}
+
+/* ============================================
    CATEGORIES SECTION
    ============================================ */
 
 .categories-section {
     background: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+    box-shadow: inset 0 10px 15px -3px rgba(0, 0, 0, 0.02);
 }
 
 .filter-container {
@@ -1498,11 +1643,12 @@ section {
         font-size: var(--font-size-2xl);
     }
 
-    .hero-buttons {
-        flex-direction: column;
+    .clubs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
     }
 
-    .clubs-grid {
+    .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--spacing-md);
     }
@@ -1597,6 +1743,15 @@ section {
         font-size: var(--font-size-xl);
     }
 
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn-large {
+        width: 100%;
+    }
+
     .hero-content {
         padding: var(--spacing-lg);
     }
@@ -1622,6 +1777,11 @@ section {
     }
 
     .clubs-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .benefits-grid {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
