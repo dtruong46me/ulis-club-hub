@@ -544,7 +544,7 @@
     {
         "id": "24",
         "club_name": "AC4U - Art Club For Ulisers And You",
-        "category":["Nghệ thuật", "Sở thích", "Kỹ năng"],
+        "category":["Nghệ thuật", "Thể chất"],
         "introduction": "Không chỉ là nơi hội tụ những tâm hồn yêu âm nhạc và nghệ thuật, AC4U còn mang tới một môi trường rèn luyện chuyên môn bài bản và chuyên nghiệp. Tại đây, sự gắn kết được tạo nên từ chính tình yêu nghệ thuật thuần khiết. Mỗi sân khấu được dựng lên, mỗi lần ánh đèn bừng sáng đều là minh chứng rõ nét nhất cho nỗ lực và nhiệt huyết tuổi trẻ của Art Club ULIS.",
         "contact": "Fanpage: https://www.facebook.com/ac4u.ulis",
         "structure": "Hoạt động với các mảng chính:\n• Mảng Chuyên môn (Hát, Múa, Nhảy)\n• Mảng Hỗ trợ (Truyền thông, Đối ngoại...)",
@@ -554,15 +554,20 @@
         "meeting_schedule": "• Cố định thứ 4 hằng tuần sau giờ học.",
         "key_activities": "• Chương trình Chào Ngoại Ngữ qua các năm\n• Sự kiện kỉ niệm 70 năm thành lập trường\n• Lễ hội ULIS Fire Day 2025\n• Biểu diễn tại các Lễ Tốt nghiệp",
         "formlink": "",
-        "bg_image": "",
-        "images":[],
+        "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/bg.JPG",
+        "images":[
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/1.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/2.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/3.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/4.JPG"
+        ],
         "tags": ["nghethuat", "amnhac", "ac4u", "hat", "mua"],
         "additional_info": ""
     },
     {
         "id": "25",
         "club_name": "ULIS Yosakoi - Đội nhảy Yosakoi Đại học Ngoại Ngữ",
-        "category": ["Nghệ thuật", "Văn hóa", "Thể thao"],
+        "category": ["Nghệ thuật", "Thể chất"],
         "introduction": "Đội nhảy ULIS Yosakoi (ユーリスよさこい) là nơi đưa văn hóa truyền thống Nhật Bản đến gần hơn với sinh viên thông qua những điệu nhảy tràn đầy năng lượng. Đến với ULIS Yosakoi, các thành viên không chỉ được học các động tác dứt khoát, mạnh mẽ mà còn được hòa mình vào một môi trường tập thể nhiệt huyết, rèn luyện sức khỏe bền bỉ và mang đậm tinh thần võ sĩ đạo.",
         "contact": "Fanpage: https://www.facebook.com/UlisYosakoi",
         "structure": "• Đang cập nhật",
@@ -572,15 +577,20 @@
         "meeting_schedule": "• Đi tập Yosakoi 2 buổi/tuần.",
         "key_activities": "• Biểu diễn tại các lễ hội giao lưu văn hóa Việt - Nhật.\n• Tổ chức sinh nhật đội và các buổi bonding gắn kết thành viên.",
         "formlink": "",
-        "bg_image": "",
-        "images": [],
+        "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/bg.JPG",
+        "images": [
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/1.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/2.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/3.JPG",
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/4.JPG"
+        ],
         "tags":["yosakoi", "nhay", "nhatban", "vanhoa", "nghethuat"],
         "additional_info": ""
     },
     {
         "id": "26",
         "club_name": "Step Up Dancing Club",
-        "category": ["Nghệ thuật", "Sở thích"],
+        "category": ["Nghệ thuật", "Thể chất"],
         "introduction": "Tự hào là Câu lạc bộ nhảy đầu tiên của Đại học Ngoại ngữ với bề dày 15 năm hoạt động, Step Up Club là nơi hội tụ của những tâm hồn trẻ trung, đam mê và tràn đầy nhiệt huyết với vũ đạo. Cùng khẩu hiệu hành động 'STEP TO THE RHYTHM - UP TO THE GREATNESS', CLB không ngừng truyền cảm hứng và giúp các thế hệ sinh viên tự tin cháy hết mình trên những sân khấu rực rỡ nhất.",
         "contact": "Fanpage: https://www.facebook.com/step.up.dancing.club",
         "structure": "Cơ cấu tổ chức chia thành 2 mảng chính:\n• Ban Nhảy (Chuyên môn)\n• Ban Truyền thông - Nhân hậu (Hỗ trợ vận hành)",
@@ -590,8 +600,10 @@
         "meeting_schedule": "• Đang cập nhật (Thường tập luyện tăng cường trước các sự kiện lớn).",
         "key_activities": "• Trình diễn tại chương trình Chào Ngoại Ngữ, Lễ kỷ niệm 70 năm ULIS.\n• Tổ chức các lớp học chuyên đề (Ví dụ: Workshop Girlstyle cùng Mee Nguyễn...).",
         "formlink": "",
-        "bg_image": "",
-        "images":[],
+        "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Step Up/bg.JPG",
+        "images":[
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Step Up/1.JPG"
+        ],
         "tags":["nhay", "dance", "stepup", "vudao", "nghethuat"],
         "additional_info": ""
     },
@@ -608,8 +620,10 @@
         "meeting_schedule": "• Đang cập nhật",
         "key_activities": "• Tác nghiệp tại ULIS Club Day 2025\n• Chuỗi sự kiện nội bộ: First Meeting, Bonding\n• Tổ chức hoạt động chia sẻ chuyên môn ảnh: PCU Lens",
         "formlink": "",
-        "bg_image": "",
-        "images":[],
+        "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/PCU/bg.jpg",
+        "images":[
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/PCU/1.jpg"
+        ],
         "tags": ["nhiepanh", "chupanh", "photography", "pcu", "nghethuat"],
         "additional_info": ""
     },
@@ -626,8 +640,10 @@
         "meeting_schedule": "• Đang cập nhật",
         "key_activities": "• Trình diễn tại Lễ hội Hangeulnal 2025, ULIS Korea Day 2025.\n• Góp mặt tại Đại hội nghiên cứu và giảng dạy tiếng Hàn tại Việt Nam.\n• Tổ chức Giao lưu văn hóa nghệ thuật với sinh viên Đại học Dong Eui (Hàn Quốc).",
         "formlink": "",
-        "bg_image": "",
-        "images": [],
+        "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/K Art/bg.JPG",
+        "images": [
+            "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/K Art/1.JPG"
+        ],
         "tags":["kpop", "nhaykpop", "kart", "hanquoc", "nghethuat"],
         "additional_info": ""
     }
