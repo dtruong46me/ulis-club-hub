@@ -2,7 +2,10 @@
     {
         "id": "1",
         "club_name": "PSC - Câu lạc bộ Hùng biện Trường Đại học Ngoại Ngữ",
-        "category": ["Kỹ năng", "Học thuật"],
+        "category": [
+            "Kỹ năng",
+            "Học thuật"
+        ],
         "introduction": "PSC tự hào là Câu lạc bộ Hùng biện đầu tiên và duy nhất tại Trường Đại học Ngoại ngữ - Đại Học Quốc Gia Hà Nội. Câu lạc bộ được thành lập với sứ mệnh mang đến một môi trường chuyên nghiệp để sinh viên rèn luyện và phát triển toàn diện các kỹ năng thuyết trình, hùng biện và tranh biện. Thông qua việc tổ chức thường xuyên các hoạt động thực tiễn như workshop, talkshow và các cuộc thi quy mô, PSC giúp các bạn sinh viên vượt qua sự tự ti, làm chủ sân khấu và trang bị tư duy nhạy bén.",
         "contact": "Fanpage: https://www.facebook.com/CLBHungBienUlis",
         "structure": "Cơ cấu tổ chức bao gồm Ban Điều hành (Chủ nhiệm, Phó Chủ nhiệm) và các ban chuyên môn như:\n• Ban Chuyên môn: Phụ trách xây dựng nội dung học thuật cốt lõi cho CLB, bao gồm các buổi training kỹ năng, nghiên cứu chủ đề cho các cuộc thi và đưa ra định hướng chuyên môn cho thành viên.\n• Ban Sáng tạo nội dung: Lên ý tưởng và thiết kế bài cho các kênh mạng xã hội, sự kiện\n• Ban Thiết kế & Hình ảnh: Sản xuất ấn phẩm truyền thông và thwujc hiện quay chụp, hậu kỳ\n• Ban Hậu cần & Tổ chức: Chuẩn bị vật dụng, điều phối kỹ thuật và hỗ trợ sự kiện\n• Ban Đối ngoại: Kết nối, duy trì quan hệ với đối tác và quản lý email.",
@@ -19,13 +22,17 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Hùng Biện/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Hùng Biện/4.jpg"
         ],
-        "tags": ["hungbien"],
+        "tags": [
+            "hungbien"
+        ],
         "additional_info": ""
     },
     {
         "id": "2",
         "club_name": "ULIS Reading Club - CLB Sách Trường Đại học Ngoại Ngữ",
-        "category": ["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "ULIS Reading Club là không gian kết nối những tâm hồn yêu sách, được thành lập với sứ mệnh lan tỏa văn hóa đọc trong cộng đồng sinh viên ULIS. Câu lạc bộ hướng tới việc xây dựng thói quen đọc, tạo môi trường chia sẻ tri thức và thúc đẩy tinh thần học tập suốt đời cho sinh viên.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -42,13 +49,22 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Sách/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Sách/4.jpg"
         ],
-        "tags":["sach", "readingclub", "hocthuat", "docsach"],
+        "tags": [
+            "sach",
+            "readingclub",
+            "hocthuat",
+            "docsach"
+        ],
         "additional_info": ""
     },
     {
         "id": "3",
         "club_name": "ETIC - CLB Dịch thuật tiếng Anh Đại học Ngoại Ngữ",
-        "category":["Học thuật", "Ngôn ngữ", "Kỹ năng"],
+        "category": [
+            "Học thuật",
+            "Ngôn ngữ",
+            "Kỹ năng"
+        ],
         "introduction": "CLB Dịch thuật tiếng Anh ETIC là môi trường lý tưởng để các bạn sinh viên giao lưu, chia sẻ kinh nghiệm và rèn luyện kỹ năng tiếng Anh, đặc biệt là trau dồi nghiệp vụ biên - phiên dịch chuyên nghiệp để chuẩn bị cho con đường nghề nghiệp tương lai.",
         "contact": "",
         "structure": "Cơ cấu tổ chức thường được chia thành các ban:\n• Ban Biên dịch\n• Ban Phiên dịch\n• Ban Truyền thông\n• Ban Đối ngoại",
@@ -65,13 +81,22 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Dịch thuật Tiếng Anh/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Dịch thuật Tiếng Anh/4.jpg"
         ],
-        "tags":["dichthuat", "tienganh", "etic", "ngonngu", "phiendich"],
+        "tags": [
+            "dichthuat",
+            "tienganh",
+            "etic",
+            "ngonngu",
+            "phiendich"
+        ],
         "additional_info": ""
     },
     {
         "id": "4",
         "club_name": "ULIS IT - CLB Công nghệ thông tin Đại học Ngoại ngữ",
-        "category":["Học thuật", "Truyền thông"],
+        "category": [
+            "Học thuật",
+            "Truyền thông"
+        ],
         "introduction": "ULIS IT là câu lạc bộ tập trung phát triển kỹ năng số và ứng dụng công nghệ thông tin. CLB tạo ra một không gian mở cho những sinh viên ngoại ngữ đam mê công nghệ được giao lưu, học hỏi và tìm ra các giải pháp số hóa hỗ trợ hiệu quả cho việc học tập, thiết kế và truyền thông.",
         "contact": "Fanpage: https://www.facebook.com/ulisit.club",
         "structure": "Cơ cấu tổ chức bao gồm các ban chính:\n• Ban Kỹ thuật (Support & Tech): Coding, web, hỗ trợ công nghệ.\n• Ban Truyền thông & Design: Lên nội dung và thiết kế ấn phẩm.\n• Ban Sự kiện: Tổ chức các chương trình, workshop.\n• Ban Đối ngoại: Kết nối tài trợ và đối tác.",
@@ -82,7 +107,7 @@
         "key_activities": "• Hỗ trợ kỹ thuật sự kiện lớn (ULIS Teambuilding, Ngày hội đổi mới sáng tạo, Lễ tốt nghiệp...)\n• Chuỗi Workshop IT dành cho dân ngoại ngữ\n• Dự án Hỗ trợ máy tính cho sinh viên\n• Các cuộc thi sáng tạo nội dung số",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/bg.jpg",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/1.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/2.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/3.jpg",
@@ -92,13 +117,21 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/7.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS IT/8.jpg"
         ],
-        "tags":["it", "congnghethongtin", "kynangso", "tech", "thietke"],
+        "tags": [
+            "it",
+            "congnghethongtin",
+            "kynangso",
+            "tech",
+            "thietke"
+        ],
         "additional_info": ""
     },
     {
         "id": "5",
         "club_name": "ULIS Vietnamese - CLB Tiếng Việt",
-        "category":["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "Câu lạc bộ ULIS Vietnamese mang đến một môi trường năng động để sinh viên rèn luyện kỹ năng giao tiếp tiếng Việt, trau dồi kỹ năng sư phạm và tham gia giao lưu văn hóa trực tiếp với cộng đồng sinh viên quốc tế đang học tập tại trường.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -116,13 +149,20 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS Vietnamese/4.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/ULIS Vietnamese/5.jpg"
         ],
-        "tags":["tiengviet", "vanhoa", "giaoluu", "vietnamese"],
+        "tags": [
+            "tiengviet",
+            "vanhoa",
+            "giaoluu",
+            "vietnamese"
+        ],
         "additional_info": ""
     },
     {
         "id": "6",
         "club_name": "汉语社 - CLB Tiếng Trung ULIS",
-        "category": ["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "CLB Tiếng Trung ULIS (汉语社) là ngôi nhà chung dành cho các bạn sinh viên yêu thích ngôn ngữ và văn hóa Trung Hoa. Câu lạc bộ mang đến môi trường học thuật chuyên sâu, gắn kết cộng đồng và những trải nghiệm giao lưu văn hóa, nghệ thuật vô cùng đặc sắc.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -139,13 +179,21 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Trung/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Trung/4.jpg"
         ],
-        "tags":["tiengtrung", "hanyu", "ngonngu", "vanhoa", "trungquoc"],
+        "tags": [
+            "tiengtrung",
+            "hanyu",
+            "ngonngu",
+            "vanhoa",
+            "trungquoc"
+        ],
         "additional_info": ""
     },
     {
         "id": "7",
         "club_name": "Deutschklub ULIS - CLB Tiếng Đức",
-        "category": ["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "Deutschklub ULIS tạo ra một không gian giao lưu học thuật và văn hóa thân thiện mang đậm phong cách châu Âu. Câu lạc bộ giúp sinh viên không chỉ cải thiện trình độ tiếng Đức mà còn hiểu sâu sắc hơn về đất nước, con người và nắm bắt các cơ hội học bổng, việc làm tại Đức.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -162,13 +210,21 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Đức/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Đức/4.jpg"
         ],
-        "tags":["tiengduc", "deutsch", "ngonngu", "vanhoa", "duhocduc"],
+        "tags": [
+            "tiengduc",
+            "deutsch",
+            "ngonngu",
+            "vanhoa",
+            "duhocduc"
+        ],
         "additional_info": ""
     },
     {
         "id": "8",
         "club_name": "CLB Tiếng Ả Rập - ULIS",
-        "category": ["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "Là một sân chơi học thuật và văn hóa độc đáo, Câu lạc bộ Tiếng Ả Rập kết nối sinh viên với thế giới Trung Đông huyền bí. CLB đồng hành và hỗ trợ sinh viên trải nghiệm, tiếp cận ngôn ngữ Ả Rập một cách tự nhiên, thú vị và hiệu quả nhất.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -185,13 +241,21 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Ả Rập/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Ả Rập/4.jpg"
         ],
-        "tags":["tiengarap", "arabic", "ngonngu", "vanhoa", "trungdong"],
+        "tags": [
+            "tiengarap",
+            "arabic",
+            "ngonngu",
+            "vanhoa",
+            "trungdong"
+        ],
         "additional_info": ""
     },
     {
         "id": "9",
         "club_name": "ULIS Japanese Club (UJC)",
-        "category": ["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "ULIS Japanese Club (UJC) mang đến một môi trường giao lưu văn hóa và học thuật lành mạnh. Không chỉ hỗ trợ nâng cao năng lực tiếng Nhật, UJC còn là nơi lan tỏa vẻ đẹp của đất nước Phù Tang thông qua các hoạt động trải nghiệm thực tế sinh động.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -208,13 +272,22 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Nhật/3.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Nhật/4.jpg"
         ],
-        "tags":["tiengnhat", "japanese", "ngonngu", "vanhoa", "nhatban", "ujc"],
+        "tags": [
+            "tiengnhat",
+            "japanese",
+            "ngonngu",
+            "vanhoa",
+            "nhatban",
+            "ujc"
+        ],
         "additional_info": ""
     },
     {
         "id": "10",
         "club_name": "CLB Tiếng Nga - ULIS",
-        "category":["Học thuật"],
+        "category": [
+            "Học thuật"
+        ],
         "introduction": "CLB Tiếng Nga là sân chơi lý tưởng dành riêng cho những sinh viên trót yêu ngôn ngữ và tâm hồn Nga. Bên cạnh các hoạt động hỗ trợ học thuật, CLB còn nỗ lực mang văn hóa, lịch sử Nga đến gần hơn với giới trẻ thông qua các sự kiện giao lưu, nghệ thuật truyền thống.",
         "contact": "",
         "structure": "• Đang cập nhật",
@@ -230,13 +303,23 @@
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Nga/2.jpg",
             "assets/images/Ảnh CLB/CLB Học thuật-Chuyên ngành/CLB Tiếng Nga/3.jpg"
         ],
-        "tags":["tiengnga", "nga", "ngonngu", "vanhoa", "russian"],
+        "tags": [
+            "tiengnga",
+            "nga",
+            "ngonngu",
+            "vanhoa",
+            "russian"
+        ],
         "additional_info": ""
     },
     {
         "id": "11",
         "club_name": "CLB Sức Trẻ (Youth Club)",
-        "category":["Tình nguyện", "Kỹ năng mềm"],
+        "category": [
+            "Tình nguyện",
+            "Kỹ năng mềm",
+            "Yêu thích"
+        ],
         "introduction": "Trực thuộc Đoàn Thanh niên - Hội Sinh viên Trường Đại học Ngoại ngữ, CLB Sức Trẻ là một trong những câu lạc bộ tiêu biểu ở mảng hoạt động xã hội. CLB hướng tới việc lan tỏa tinh thần thiện nguyện, kết nối sinh viên với những giá trị cộng đồng tốt đẹp thông qua các dự án thực tế.",
         "contact": "Fanpage: https://www.facebook.com/clbsuctredhnn",
         "structure": "Cơ cấu tổ chức:\n• Ban Nội dung: Lên ý tưởng, kịch bản chương trình.\n• Ban Truyền thông: Quản lý fanpage, thiết kế, content.\n• Ban Nhân sự - Đối ngoại: Tuyển thành viên, làm việc với đối tác.\n• Ban Hậu cần: Chuẩn bị vật tư, hỗ trợ triển khai thực địa.",
@@ -253,13 +336,22 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB SỨC TRẺ/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB SỨC TRẺ/4.jpg"
         ],
-        "tags":["tinhnguyen", "suctre", "youthclub", "xahoi"],
+        "tags": [
+            "tinhnguyen",
+            "suctre",
+            "youthclub",
+            "xahoi"
+        ],
         "additional_info": ""
     },
     {
         "id": "12",
         "club_name": "EC ULIS - CLB Tiếng Anh Đại học Ngoại ngữ",
-        "category": ["Học thuật", "Kỹ năng mềm"],
+        "category": [
+            "Học thuật",
+            "Kỹ năng mềm",
+            "Yêu thích"
+        ],
         "introduction": "Với hơn 10 năm hoạt động, EC ULIS là một trong những Câu lạc bộ học thuật danh tiếng và lâu đời nhất tại trường. Nổi bật với việc tổ chức các sự kiện, cuộc thi quy mô lớn hoàn toàn bằng tiếng Anh, EC ULIS giúp sinh viên bứt phá rào cản ngôn ngữ và phát triển tư duy, kỹ năng mềm trong một môi trường làm việc thực tế, áp lực nhưng đầy cảm hứng.",
         "contact": "Fanpage: https://www.facebook.com/eculisvnu",
         "structure": "Cơ cấu tổ chức:\n• Ban Nội dung: Xây dựng chuyên môn, học thuật và ý tưởng kịch bản.\n• Ban Sự kiện: Lên kế hoạch vận hành và tổ chức chương trình.\n• Ban Truyền thông: Chịu trách nhiệm hình ảnh, thiết kế và nội dung mạng xã hội.\n• Ban Nhân sự - Đối ngoại: Đào tạo nhân sự, liên hệ nhà tài trợ và diễn giả.",
@@ -276,13 +368,23 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Tiếng Anh (EC ULIS)/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Tiếng Anh (EC ULIS)/4.jpg"
         ],
-        "tags":["tienganh", "englishclub", "eculis", "sukien", "hocthuat"],
+        "tags": [
+            "tienganh",
+            "englishclub",
+            "eculis",
+            "sukien",
+            "hocthuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "13",
         "club_name": "ETDC - CLB Phát triển Kỹ năng Sư phạm Tiếng Anh",
-        "category": ["Kỹ năng mềm", "Truyền thông"],
+        "category": [
+            "Kỹ năng mềm",
+            "Truyền thông",
+            "Yêu thích"
+        ],
         "introduction": "Thành lập từ năm 2007, English Teacher Development Club (ETDC) là nơi quy tụ những sinh viên mang hoài bão trở thành giáo viên tiếng Anh trong tương lai. Câu lạc bộ tập trung đào tạo và mài giũa các nghiệp vụ sư phạm cốt lõi như thiết kế giáo án, quản lý lớp học và nghệ thuật truyền đạt, giúp các thành viên vững bước trên con đường giáo dục (TESOL/ELT).",
         "contact": "Fanpage: https://www.facebook.com/etdc.ulis",
         "structure": "Cơ cấu tổ chức:\n• Ban Chủ nhiệm: Điều hành chung.\n• Ban Chuyên môn: Đào tạo nghiệp vụ, lesson planning.\n• Ban Sự kiện: Tổ chức các cuộc thi, workshop liên quan đến giáo dục.\n• Ban Truyền thông: Sáng tạo nội dung, hình ảnh.\n• Ban Đối ngoại: Kết nối đối tác giáo dục, trung tâm Anh ngữ.",
@@ -299,13 +401,21 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Phát triển kĩ năng sư phạm Tiếng Anh (English Teacher Development Club - ETDC)/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Phát triển kĩ năng sư phạm Tiếng Anh (English Teacher Development Club - ETDC)/4.jpg"
         ],
-        "tags":["supham", "tienganh", "etdc", "giaoduc", "hocthuat"],
+        "tags": [
+            "supham",
+            "tienganh",
+            "etdc",
+            "giaoduc",
+            "hocthuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "14",
         "club_name": "Sign By Sign - Thanh âm từ trái tim",
-        "category": ["Kỹ năng mềm"],
+        "category": [
+            "Kỹ năng mềm"
+        ],
         "introduction": "Ra đời từ một dự án xuất sắc giành Quán quân \"Sinh viên Thế hệ mới 2024\", Sign By Sign là Câu lạc bộ Ngôn ngữ Ký hiệu tiên phong tại ULIS. Với mong muốn xóa bỏ rào cản giao tiếp giữa người nghe và người khiếm thính, CLB lan tỏa vẻ đẹp của ngôn ngữ ký hiệu, đồng thời nâng cao nhận thức cộng đồng để xây dựng một xã hội thấu cảm, bình đẳng hơn.",
         "contact": "Fanpage: https://www.facebook.com/profile.php?id=61565455209361",
         "structure": "Cơ cấu tổ chức:\n• Ban Chủ nhiệm: Quản lý tổng thể.\n• Ban Chuyên môn: Nghiên cứu, xây dựng học liệu và trực tiếp đào tạo ngôn ngữ ký hiệu.\n• Ban Kế hoạch & Sự kiện: Thiết kế và vận hành các chương trình, dự án.\n• Ban Truyền thông & Đối ngoại: Lan tỏa giá trị dự án và kết nối các tổ chức hỗ trợ người điếc.",
@@ -316,19 +426,28 @@
         "key_activities": "• Tổ chức các lớp học và thực hành ngôn ngữ ký hiệu.\n• Workshop truyền cảm hứng và nâng cao nhận thức về người khiếm thính.\n• Phát triển các học liệu điện tử, video online hướng dẫn ký hiệu.\n• Giao lưu trực tiếp với cộng đồng sử dụng ngôn ngữ ký hiệu tại Hà Nội.",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Ngôn ngữ ký hiệu Sign By Sign - Thanh âm từ trái tim/bg.jpg",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Ngôn ngữ ký hiệu Sign By Sign - Thanh âm từ trái tim/1.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Ngôn ngữ ký hiệu Sign By Sign - Thanh âm từ trái tim/2.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Ngôn ngữ ký hiệu Sign By Sign - Thanh âm từ trái tim/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Ngôn ngữ ký hiệu Sign By Sign - Thanh âm từ trái tim/4.jpg"
         ],
-        "tags":["ngonngukyhieu", "signlanguage", "tinhnguyen", "signbysign", "congdong"],
+        "tags": [
+            "ngonngukyhieu",
+            "signlanguage",
+            "tinhnguyen",
+            "signbysign",
+            "congdong"
+        ],
         "additional_info": ""
     },
     {
         "id": "15",
         "club_name": "CLB Niềm tin ánh sáng ULIS",
-        "category": ["Tình nguyện", "Kỹ năng mềm"],
+        "category": [
+            "Tình nguyện",
+            "Kỹ năng mềm"
+        ],
         "introduction": "Niềm Tin Ánh Sáng là câu lạc bộ tình nguyện đầy nhiệt huyết, hướng đến việc đồng hành và sẻ chia cùng trẻ em, những hoàn cảnh yếu thế trong xã hội. Không chỉ tổ chức các chuyến đi thiện nguyện, CLB còn là nơi để các thành viên tự rèn luyện sự thấu cảm, tinh thần trách nhiệm và các kỹ năng tổ chức dự án cộng đồng mang tính bền vững.",
         "contact": "Fanpage: https://www.facebook.com/Niemtinanhsang.ulis.vnu",
         "structure": "Cơ cấu tổ chức:\n• Ban Nội dung: Lên ý tưởng dự án, kế hoạch thiện nguyện.\n• Ban Truyền thông: Phụ trách hình ảnh, kêu gọi gây quỹ online.\n• Ban Nhân sự - Đối ngoại: Tuyển dụng và tìm kiếm nhà tài trợ.\n• Ban Hậu cần: Chuẩn bị quà tặng, vật tư và hậu cần cho các chuyến đi.",
@@ -345,13 +464,21 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Niềm tin ánh sáng ULIS/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Niềm tin ánh sáng ULIS/4.jpg"
         ],
-        "tags":["tinhnguyen", "niemtinanhsang", "thiennguyen", "congdong"],
+        "tags": [
+            "tinhnguyen",
+            "niemtinanhsang",
+            "thiennguyen",
+            "congdong"
+        ],
         "additional_info": ""
     },
     {
         "id": "16",
         "club_name": "CEO - CLB Tổ chức sự kiện (Club of Event Organizers)",
-        "category":["Kỹ năng mềm", "Truyền thông"],
+        "category": [
+            "Kỹ năng mềm",
+            "Truyền thông"
+        ],
         "introduction": "CEO tự hào là Câu lạc bộ Tổ chức sự kiện đầu tiên và duy nhất tại Trường Đại học Ngoại ngữ - ĐHQGHN. Đây là một môi trường làm việc chuyên nghiệp, đòi hỏi tính kỷ luật và sáng tạo cao. Tham gia CEO, sinh viên sẽ được trải nghiệm trọn vẹn quy trình kiến tạo nên một sự kiện hoàn chỉnh, từ những ý tưởng trên mặt giấy đến sự bùng nổ trên sân khấu thực tế.",
         "contact": "Fanpage: https://www.facebook.com/ceo.ulis.vnu",
         "structure": "Cơ cấu tổ chức chuyên nghiệp gồm 5 ban:\n• Ban Nội dung: Xây dựng format, viết kịch bản MC, timeline chi tiết.\n• Ban Sự kiện: Điều phối sân khấu, chạy chương trình trực tiếp.\n• Ban Truyền thông: Chụp ảnh, thiết kế, quản lý fanpage, PR sự kiện.\n• Ban Hậu cần: Lên dự trù kinh phí, mua sắm vật tư, setup không gian.\n• Ban Đối ngoại: Viết hồ sơ tài trợ, thương thuyết với đối tác, doanh nghiệp.",
@@ -368,13 +495,22 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Tổ chức sự kiện/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/CLB Tổ chức sự kiện/4.jpg"
         ],
-        "tags":["sukien", "event", "ceo", "kynang", "tochucsukien"],
+        "tags": [
+            "sukien",
+            "event",
+            "ceo",
+            "kynang",
+            "tochucsukien"
+        ],
         "additional_info": ""
     },
     {
         "id": "17",
         "club_name": "ULIS TV - Kênh truyền hình sinh viên",
-        "category":["Truyền thông", "Kỹ năng mềm"],
+        "category": [
+            "Truyền thông",
+            "Kỹ năng mềm"
+        ],
         "introduction": "ULIS TV là kênh truyền hình truyền thông đa phương tiện của sinh viên Đại học Ngoại ngữ. Đóng vai trò như một \"đội ngũ Media Production House\" thu nhỏ, ULIS TV chuyên sản xuất các nội dung video chất lượng cao, kể những câu chuyện thú vị về đời sống, học tập và các sự kiện nổi bật, góp phần xây dựng hình ảnh năng động của trường.",
         "contact": "Fanpage: https://www.facebook.com/ulistv.livinginshots",
         "structure": "Cơ cấu tổ chức:\n• Ban Chủ nhiệm: Quản lý và duyệt sản phẩm.\n• Ban Nội dung: Sáng tạo format, lên ý tưởng, viết kịch bản video/phóng sự.\n• Ban Quay dựng: Trực tiếp cầm máy quay phim, thu âm và xử lý hậu kỳ (Edit video).\n• Ban Truyền thông: Phân phối nội dung lên các nền tảng mạng xã hội, tương tác với khán giả.",
@@ -391,13 +527,22 @@
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/ULIS TV/3.jpg",
             "assets/images/Ảnh CLB/CLB Kĩ năng mềm, truyền thông/ULIS TV/4.jpg"
         ],
-        "tags":["media", "ulistv", "truyenthong", "quayphim", "editvideo"],
+        "tags": [
+            "media",
+            "ulistv",
+            "truyenthong",
+            "quayphim",
+            "editvideo"
+        ],
         "additional_info": ""
     },
-{
+    {
         "id": "18",
         "club_name": "S.H.U - CLB Bóng đá Đại học Ngoại ngữ",
-        "category":["Thể chất"],
+        "category": [
+            "Thể chất",
+            "Yêu thích"
+        ],
         "introduction": "S.H.U là Câu lạc bộ bóng đá chính thức của Trường Đại học Ngoại ngữ, được thành lập từ năm 2016. Với khẩu hiệu 'Once a SHUer, Always a SHUer', CLB hướng tới việc xây dựng một môi trường thể thao chuyên nghiệp, nhiệt huyết, nơi sinh viên có thể rèn luyện thể lực, mài giũa kỹ năng và đại diện trường thi đấu ở nhiều cấp độ khác nhau.",
         "contact": "Fanpage: https://www.facebook.com/clbbongdaulis\nEmail: clbbongdaulis@gmail.com\nChủ nhiệm: Nguyễn Việt Anh - 0366023204",
         "structure": "• Đang cập nhật",
@@ -415,13 +560,20 @@
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/S.H.U - CLB Bóng đá Đại học Ngoại ngữ - ĐHQGHN/4.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/S.H.U - CLB Bóng đá Đại học Ngoại ngữ - ĐHQGHN/5.jpg"
         ],
-        "tags":["bongda", "thethao", "shu", "soccer"],
+        "tags": [
+            "bongda",
+            "thethao",
+            "shu",
+            "soccer"
+        ],
         "additional_info": ""
     },
     {
         "id": "19",
         "club_name": "DEVIL BATS - ULIS Baseball Team",
-        "category":["Thể chất"],
+        "category": [
+            "Thể chất"
+        ],
         "introduction": "Thành lập năm 2017, Devil Bats là Câu lạc bộ Bóng chày mang đậm tinh thần chiến đấu mạnh mẽ với khẩu hiệu 'No bat flies alone'. Bảng thành tích đáng nể tại các giải đấu thủ đô và toàn quốc đã khẳng định vị thế của CLB, đồng thời mở ra một môi trường tập luyện kỷ luật, máu lửa cho những ai đam mê bộ môn thể thao mới mẻ này.",
         "contact": "Fanpage: ULIS Devil Bats Baseball Team\nInstagram: @devilbatsbaseball.official\nEmail: devilbatsbaseballteam@gmail.com\nManager: Đặng Anh Tú - 0349352824",
         "structure": "• Đang cập nhật",
@@ -432,7 +584,7 @@
         "key_activities": "• Tập luyện kỹ chiến thuật bóng chày định kỳ.\n• Trực tiếp tham gia các giải đấu chuyên nghiệp (Thành tích tiêu biểu: HCĐ Cúp Quốc gia 2022, Hạng 3 Vô địch Hà Nội 2023, Vô địch Hanoi Super Base 2025).",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/bg.jpg",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/1.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/2.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/3.jpg",
@@ -440,13 +592,20 @@
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/5.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/DEVIL BATS - ULIS Baseball Team (bóng chày)/6.jpg"
         ],
-        "tags": ["bongchay", "baseball", "devilbats", "thethao"],
+        "tags": [
+            "bongchay",
+            "baseball",
+            "devilbats",
+            "thethao"
+        ],
         "additional_info": ""
     },
     {
         "id": "20",
         "club_name": "URC - ULIS Rugby Club",
-        "category": ["Thể chất"],
+        "category": [
+            "Thể chất"
+        ],
         "introduction": "URC tự hào mang đến cho sinh viên cơ hội trải nghiệm bóng bầu dục - một bộ môn thể thao độc đáo, tốc độ và đầy thách thức tại Việt Nam. Câu lạc bộ là nơi lý tưởng để người trẻ rèn luyện thể lực vượt trội, trau dồi tư duy chiến thuật nhạy bén và khơi dậy tinh thần chiến binh mạnh mẽ.",
         "contact": "Fanpage: https://www.facebook.com/URC-ULIS-Rugby-Club-105916804649437/\nEmail: urcclub0501@gmail.com\nChủ nhiệm: Nguyễn Thị Huyền Trang - 0352 511 172",
         "structure": "• Đang cập nhật",
@@ -463,13 +622,20 @@
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/URC - ULIS Rugby Club (bóng bầu dục)/3.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/URC - ULIS Rugby Club (bóng bầu dục)/4.jpg"
         ],
-        "tags":["bongbauduc", "rugby", "urc", "thethao"],
+        "tags": [
+            "bongbauduc",
+            "rugby",
+            "urc",
+            "thethao"
+        ],
         "additional_info": ""
     },
     {
         "id": "21",
         "club_name": "CLB Karate Đại học Quốc gia Hà Nội - Cơ sở Ngoại Ngữ",
-        "category": ["Thể chất"],
+        "category": [
+            "Thể chất"
+        ],
         "introduction": "Là đơn vị trực thuộc Đại học Quốc gia Hà Nội nhưng hoạt động thường xuyên tại cơ sở Ngoại ngữ, CLB Karate mang đến một môi trường rèn luyện võ thuật bài bản, chuẩn mực. Đây không chỉ là nơi sinh viên nâng cao sức khỏe, học kỹ năng tự vệ mà còn là lò luyện tinh thần tôn sư trọng đạo và ý chí thép.",
         "contact": "Facebook: Karate Đại học Quốc gia Hà Nội\nEmail: karatedaihocquocgiahanoi@gmail.com\nHLV: Đàm Hải Yến - 0944522233",
         "structure": "• Đang cập nhật",
@@ -487,13 +653,21 @@
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/CLB Karate Đại học Quốc gia Hà Nội - (Cơ sở Ngoại Ngữ)/4.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/CLB Karate Đại học Quốc gia Hà Nội - (Cơ sở Ngoại Ngữ)/5.jpg"
         ],
-        "tags":["karate", "vothuat", "thethao", "tuve"],
+        "tags": [
+            "karate",
+            "vothuat",
+            "thethao",
+            "tuve"
+        ],
         "additional_info": ""
     },
     {
         "id": "22",
         "club_name": "GUMMY - ULIS Cheerleading Team",
-        "category": ["Thể chất", "Nghệ thuật"],
+        "category": [
+            "Thể chất",
+            "Nghệ thuật"
+        ],
         "introduction": "GUMMY ghi dấu ấn là Câu lạc bộ Nhảy cổ động (Cheerleading) đầu tiên và duy nhất của Trường Đại học Ngoại ngữ. Đội hình GUMMY luôn là tâm điểm năng lượng của mọi sự kiện nhờ những màn trình diễn vũ đạo sôi động, kỹ thuật nhào lộn mãn nhãn cùng một tinh thần đồng đội rực lửa.",
         "contact": "Instagram: @gummy.ulischeerleadingteam\nTikTok: @gummy.cheerleadingteam\nEmail: gummy.ulischeerleadingteam@gmail.com",
         "structure": "Hoạt động theo 2 mảng chính:\n• Mảng Chuyên môn: Tập luyện vũ đạo và kỹ thuật tháp người (Flyer, Base, Backspot).\n• Mảng Truyền thông: Chụp ảnh, dựng video, quản lý fanpage và sáng tạo nội dung.",
@@ -512,13 +686,22 @@
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/GUMMY - ULIS Cheerleading Team (nhảy cổ động)/5.jpg",
             "assets/images/Ảnh CLB/CLB Thể thao, thể chất/GUMMY - ULIS Cheerleading Team (nhảy cổ động)/6.jpg"
         ],
-        "tags":["cheerleading", "nhaycodong", "gummy", "thethao", "nghethuat"],
+        "tags": [
+            "cheerleading",
+            "nhaycodong",
+            "gummy",
+            "thethao",
+            "nghethuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "23",
         "club_name": "Dự án Service Learning Program: ULIS x SCU",
-        "category":["Tình nguyện", "Kỹ năng mềm"],
+        "category": [
+            "Tình nguyện",
+            "Kỹ năng mềm"
+        ],
         "introduction": "Đây không phải là một Câu lạc bộ thông thường, mà là một Dự án Học tập Phục vụ Cộng đồng (Service Learning) tầm cỡ quốc tế, do Trường Đại học Ngoại ngữ (ULIS) phối hợp cùng Trường Đại học Soochow - SCU (Đài Loan) tổ chức. Dự án mang đến cho sinh viên những trải nghiệm thực địa quý giá tại Sapa, kết hợp hoàn hảo giữa hoạt động thiện nguyện, thực hành giảng dạy và giao lưu văn hóa đa quốc gia.",
         "contact": "Điều phối dự án: Cô Phạm Kim Ngân",
         "structure": "• Mô hình dự án ngắn hạn cấp Trường/Khoa, hoạt động theo nhóm dự án do Giảng viên trực tiếp điều phối.",
@@ -538,13 +721,23 @@
             "assets/images/Ảnh CLB/tình nguyện/6.jpg",
             "assets/images/Ảnh CLB/tình nguyện/7.jpg"
         ],
-        "tags":["duan", "tinhnguyen", "servicelearning", "quocte", "sapa"],
+        "tags": [
+            "duan",
+            "tinhnguyen",
+            "servicelearning",
+            "quocte",
+            "sapa"
+        ],
         "additional_info": "Kinh phí tham gia: Dự kiến khoảng 5.000.000 VNĐ/sinh viên (chi trả cho chuyến đi Sapa kéo dài 8 ngày 7 đêm). Địa điểm triển khai dự án thực địa: Xã Tả Van, Thị xã Sapa, tỉnh Lào Cai."
     },
     {
         "id": "24",
         "club_name": "AC4U - Art Club For Ulisers And You",
-        "category":["Nghệ thuật", "Thể chất"],
+        "category": [
+            "Nghệ thuật",
+            "Thể chất",
+            "Yêu thích"
+        ],
         "introduction": "Không chỉ là nơi hội tụ những tâm hồn yêu âm nhạc và nghệ thuật, AC4U còn mang tới một môi trường rèn luyện chuyên môn bài bản và chuyên nghiệp. Tại đây, sự gắn kết được tạo nên từ chính tình yêu nghệ thuật thuần khiết. Mỗi sân khấu được dựng lên, mỗi lần ánh đèn bừng sáng đều là minh chứng rõ nét nhất cho nỗ lực và nhiệt huyết tuổi trẻ của Art Club ULIS.",
         "contact": "Fanpage: https://www.facebook.com/ac4u.ulis",
         "structure": "Hoạt động với các mảng chính:\n• Mảng Chuyên môn (Hát, Múa, Nhảy)\n• Mảng Hỗ trợ (Truyền thông, Đối ngoại...)",
@@ -555,19 +748,28 @@
         "key_activities": "• Chương trình Chào Ngoại Ngữ qua các năm\n• Sự kiện kỉ niệm 70 năm thành lập trường\n• Lễ hội ULIS Fire Day 2025\n• Biểu diễn tại các Lễ Tốt nghiệp",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/bg.JPG",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/1.JPG",
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/2.JPG",
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/3.JPG",
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/AC4U/4.JPG"
         ],
-        "tags": ["nghethuat", "amnhac", "ac4u", "hat", "mua"],
+        "tags": [
+            "nghethuat",
+            "amnhac",
+            "ac4u",
+            "hat",
+            "mua"
+        ],
         "additional_info": ""
     },
     {
         "id": "25",
         "club_name": "ULIS Yosakoi - Đội nhảy Yosakoi Đại học Ngoại Ngữ",
-        "category": ["Nghệ thuật", "Thể chất"],
+        "category": [
+            "Nghệ thuật",
+            "Thể chất"
+        ],
         "introduction": "Đội nhảy ULIS Yosakoi (ユーリスよさこい) là nơi đưa văn hóa truyền thống Nhật Bản đến gần hơn với sinh viên thông qua những điệu nhảy tràn đầy năng lượng. Đến với ULIS Yosakoi, các thành viên không chỉ được học các động tác dứt khoát, mạnh mẽ mà còn được hòa mình vào một môi trường tập thể nhiệt huyết, rèn luyện sức khỏe bền bỉ và mang đậm tinh thần võ sĩ đạo.",
         "contact": "Fanpage: https://www.facebook.com/UlisYosakoi",
         "structure": "• Đang cập nhật",
@@ -584,13 +786,22 @@
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/3.JPG",
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Yosakoi/4.JPG"
         ],
-        "tags":["yosakoi", "nhay", "nhatban", "vanhoa", "nghethuat"],
+        "tags": [
+            "yosakoi",
+            "nhay",
+            "nhatban",
+            "vanhoa",
+            "nghethuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "26",
         "club_name": "Step Up Dancing Club",
-        "category": ["Nghệ thuật", "Thể chất"],
+        "category": [
+            "Nghệ thuật",
+            "Thể chất"
+        ],
         "introduction": "Tự hào là Câu lạc bộ nhảy đầu tiên của Đại học Ngoại ngữ với bề dày 15 năm hoạt động, Step Up Club là nơi hội tụ của những tâm hồn trẻ trung, đam mê và tràn đầy nhiệt huyết với vũ đạo. Cùng khẩu hiệu hành động 'STEP TO THE RHYTHM - UP TO THE GREATNESS', CLB không ngừng truyền cảm hứng và giúp các thế hệ sinh viên tự tin cháy hết mình trên những sân khấu rực rỡ nhất.",
         "contact": "Fanpage: https://www.facebook.com/step.up.dancing.club",
         "structure": "Cơ cấu tổ chức chia thành 2 mảng chính:\n• Ban Nhảy (Chuyên môn)\n• Ban Truyền thông - Nhân hậu (Hỗ trợ vận hành)",
@@ -601,16 +812,26 @@
         "key_activities": "• Trình diễn tại chương trình Chào Ngoại Ngữ, Lễ kỷ niệm 70 năm ULIS.\n• Tổ chức các lớp học chuyên đề (Ví dụ: Workshop Girlstyle cùng Mee Nguyễn...).",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Step Up/bg.JPG",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/Step Up/1.JPG"
         ],
-        "tags":["nhay", "dance", "stepup", "vudao", "nghethuat"],
+        "tags": [
+            "nhay",
+            "dance",
+            "stepup",
+            "vudao",
+            "nghethuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "27",
         "club_name": "PCU - CLB Photography Đại học Ngoại Ngữ",
-        "category": ["Nghệ thuật", "Truyền thông", "Sở thích"],
+        "category": [
+            "Nghệ thuật",
+            "Truyền thông",
+            "Sở thích"
+        ],
         "introduction": "PCU (Photography Club of ULIS) là sân chơi nghệ thuật thị giác dành riêng cho những cá nhân mang trong mình niềm đam mê nhiếp ảnh. CLB là nơi tập hợp những người yêu cái đẹp, thích bắt trọn những khoảnh khắc đáng giá để lưu giữ lại những thước phim, những ký ức tuyệt vời nhất của tuổi thanh xuân dưới mái trường Ngoại ngữ.",
         "contact": "Fanpage: https://www.facebook.com/photographyclubofulis",
         "structure": "Cơ cấu tổ chức bao gồm:\n• Tiểu ban Chuyên môn\n• Tiểu ban Nội dung\n• Tiểu ban Kỹ thuật",
@@ -621,16 +842,25 @@
         "key_activities": "• Tác nghiệp tại ULIS Club Day 2025\n• Chuỗi sự kiện nội bộ: First Meeting, Bonding\n• Tổ chức hoạt động chia sẻ chuyên môn ảnh: PCU Lens",
         "formlink": "",
         "bg_image": "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/PCU/bg.jpg",
-        "images":[
+        "images": [
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/PCU/1.jpg"
         ],
-        "tags": ["nhiepanh", "chupanh", "photography", "pcu", "nghethuat"],
+        "tags": [
+            "nhiepanh",
+            "chupanh",
+            "photography",
+            "pcu",
+            "nghethuat"
+        ],
         "additional_info": ""
     },
     {
         "id": "28",
         "club_name": "K-art - CLB Nghệ thuật K-art ULIS",
-        "category": ["Nghệ thuật", "Văn hóa"],
+        "category": [
+            "Nghệ thuật",
+            "Văn hóa"
+        ],
         "introduction": "Với bề dày hoạt động đến nay đã bước sang thế hệ thứ 11, K-art là Câu lạc bộ chuyên về trình diễn âm nhạc và văn hóa Hàn Quốc hàng đầu tại Đại học Ngoại ngữ. CLB là ngôi nhà chung cho những sinh viên mang tình yêu mãnh liệt với làn sóng Hallyu, khao khát được cháy hết mình trên sân khấu bằng những vũ đạo và giai điệu K-pop đặc sắc.",
         "contact": "Fanpage: https://www.facebook.com/clbnghethuatkartulis",
         "structure": "Cơ cấu tổ chức đa dạng:\n• Các Đội chuyên môn: Đội Nhảy, Đội Múa, Đội Hát, Đội Trống.\n• Ban Truyền thông\n• Ban Hậu cần",
@@ -644,7 +874,13 @@
         "images": [
             "assets/images/Ảnh CLB/CLB Nghệ thuật, giải trí/K Art/1.JPG"
         ],
-        "tags":["kpop", "nhaykpop", "kart", "hanquoc", "nghethuat"],
+        "tags": [
+            "kpop",
+            "nhaykpop",
+            "kart",
+            "hanquoc",
+            "nghethuat"
+        ],
         "additional_info": ""
     }
 ]

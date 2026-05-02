@@ -138,9 +138,14 @@ function renderPaginationControls(totalClubs, currentPage) {
 }
 
 function renderTopClubs() {
-    const topClubs = clubsData.filter(club => club.category && club.category.includes('Nổi bật')).slice(0, 6);
+    const topClubs = clubsData.filter(club => club.category && club.category.includes('Yêu thích')).slice(0, 6);
     const carouselTrack = document.getElementById('carouselTrack');
     carouselTrack.innerHTML = '';
+
+    if (topClubs.length === 0) {
+        carouselTrack.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #999; padding: 40px;">Chưa có CLB yêu thích nào</p>';
+        return;
+    }
 
     topClubs.forEach(club => {
         const card = document.createElement('div');
@@ -148,7 +153,7 @@ function renderTopClubs() {
         card.innerHTML = `
             <img src="${club.bg_image}" alt="${club.club_name}" class="top-club-card-image">
             <div class="top-club-card-overlay">
-                <div class="top-club-card-badge">⭐ Featured</div>
+                <div class="top-club-card-badge">💛</div>
                 <h3 class="top-club-card-title">${club.club_name}</h3>
             </div>
         `;
@@ -552,8 +557,8 @@ function closeMobileMenu() {
 // ============================================
 
 function getVisibleCardsCount() {
-    if (window.innerWidth <= 480) return 1;
-    if (window.innerWidth <= 768) return 2;
+    if (window.innerWidth <= 600) return 1;
+    if (window.innerWidth <= 992) return 2;
     return 3;
 }
 

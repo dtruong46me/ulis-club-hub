@@ -4,62 +4,76 @@
         "author": "Ẩn danh",
         "clubId": 1,
         "rating": 5,
-        "text": "PSC giúp tôi vượt qua nỗi sợ. Từ rụt rè, tôi tự tin thuyết trình!"
+        "text": "Trước đây mình tìm CLB rất cực, phải hỏi bạn bè hoặc lướt Facebook. Từ khi dùng web này thì mọi thứ gọn gàng hơn hẳn, tìm phát là ra luôn, đúng đam mê, sở thích nguyện vọng luôn."
     },
     {
         "id": 2,
         "author": "Ẩn danh",
         "clubId": 2,
         "rating": 5,
-        "text": "Không gian ấm áp. Mỗi buổi đều mang góc nhìn mới!"
+        "text": "Giao diện dễ dùng, mình không rành công nghệ mà vẫn tìm được CLB phù hợp chỉ trong vài phút"
     },
     {
         "id": 3,
         "author": "Ẩn danh",
         "clubId": 3,
         "rating": 4,
-        "text": "ETIC cung cấp thực hành dịch thuật thực tế. Kinh nghiệm quý báu!"
+        "text": "Mình thích nhất là ghi thời gian  CLB tuyển thành viên cụ thể, không sợ bỏ lỡ nữa."
     },
     {
         "id": 4,
         "author": "Ẩn danh",
         "clubId": 4,
         "rating": 4,
-        "text": "ULIS IT tuyệt vời. Tôi học được rất nhiều kỹ năng!"
+        "text": "Mình thấy web này rất hữu ích cho sinh viên năm nhất, đỡ bị 'lạc trôi' giữa quá nhiều CLB."
     },
     {
         "id": 5,
         "author": "Ẩn danh",
         "clubId": 11,
         "rating": 5,
-        "text": "Toastmasters thay đổi cuộc sống tôi. Từ sợ đến Competent Leader!"
+        "text": "CLB của mình dùng web để đăng tuyển thành viên, hiệu quả hơn đăng Facebook rất nhiều"
     },
     {
         "id": 6,
         "author": "Ẩn danh",
         "clubId": 12,
         "rating": 5,
-        "text": "Startup Club validate ý tưởng. Giờ phát triển startup thực tế!"
+        "text": "Trước giờ mình không biết trường có nhiều CLB hay vậy, nhờ web này mới khám phá được"
     },
     {
         "id": 7,
         "author": "Ẩn danh",
         "clubId": 13,
         "rating": 5,
-        "text": "Photography Club tuyệt vời. Portfolio phát triển rất nhanh!"
+        "text": "Hy vọng web sẽ phát triển thêm nhiều tính năng nữa, nhưng hiện tại đã rất tiện và đáng dùng rồi"
     },
     {
         "id": 8,
         "author": "Ẩn danh",
         "clubId": 14,
         "rating": 4,
-        "text": "Debate Club phát triển tư duy. Tôi tự tin trong tranh luận!"
+        "text": "Thích nhất là web có phần giải đáp thắc mắc, mọi vướng mắc được giải quyết kịp thời, nhanh chóng"
     },
     {
         "id": 9,
         "author": "Ẩn danh",
         "clubId": 15,
         "rating": 5,
-        "text": "Innovation Lab xử lý vấn đề thực tế. Mentorship từ chuyên gia!"
+        "text": "Sao web này không có sớm hơn để tui đỡ phải đi kiếm CLB cực như vầy"
+    },
+    {
+        "id": 10,
+        "author": "Ẩn danh",
+        "clubId": 15,
+        "rating": 5,
+        "text": "Chia sẻ siêu tâm huyết: Là một đứa sinh viên khá ‘hướng nội’, trước đây mình luôn cảm thấy việc tham gia CLB là một cái gì đó rất xa vời. Không phải vì mình không muốn, mà vì mình không biết bắt đầu từ đâu — thông tin thì rải rác, mỗi CLB một kiểu, nhiều khi thấy tuyển xong rồi mình mới biết. Nhưng từ lúc dùng web này, mọi thứ trở nên đơn giản hơn rất nhiều. Chỉ cần vài thao tác là mình có thể tìm được CLB theo đúng sở thích, xem chi tiết hoạt động, lịch sinh hoạt, các quyền lợi sẽ đạt được,.... Giao diện thì dễ dùng, rõ ràng, không bị rối như mình từng nghĩ. Và điều mình thấy đáng giá nhất là: nó giúp mình bước ra ngoài nhiều hơn, gặp gỡ nhiều người hơn."
+    },
+    {
+        "id": 11,
+        "author": "Ẩn danh",
+        "clubId": 15,
+        "rating": 5,
+        "text": "Tui mù công nghệ nhưng tui confirm là cái web này nó siêu dễ dùng nha, giao diện cũng đẹp nữa. Mê"
     }
 ]
