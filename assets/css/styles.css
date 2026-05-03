@@ -1179,36 +1179,40 @@ section {
     padding: 0 var(--spacing-lg);
 }
 
-.footer-message {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-    /* padding-bottom: var(--spacing-2xl); */
-    border-bottom: 1px solid rgba(226, 232, 240, 0.2);
-}
-
-.footer-message h3 {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-    color: white;
-    font-family: 'Comic Sans MS', cursive;
-}
-
-.footer-message p {
-    color: #cbd5e0;
-    line-height: 1.8;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-2xl);
-    margin-bottom: var(--spacing-2xl);
-}
+/* Removed old .footer-message to reduce spacing */
 
 .footer-column h4 {
     color: white;
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-md);
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: #cbd5e0;
+    line-height: 1.5;
+}
+
+.footer-contact-list .contact-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    padding-top: var(--spacing-md);
 }
 
 .footer-column ul {

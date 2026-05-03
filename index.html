@@ -31,6 +31,7 @@
                     <li><a href="#top-clubs" class="nav-link">Top Clubs</a></li>
                     <li><a href="#reviews" class="nav-link">Review</a></li>
                     <li><a href="#tips" class="nav-link">Cẩm nang</a></li>
+                    <li><a href="#team" class="nav-link">Thành viên</a></li>
                 </ul>
             </div>
             <div class="navbar-right">
@@ -47,6 +48,7 @@
             <a href="#top-clubs" onclick="closeMobileMenu()">Top Clubs</a>
             <a href="#reviews" onclick="closeMobileMenu()">Review</a>
             <a href="#tips" onclick="closeMobileMenu()">Cẩm nang</a>
+            <a href="#team" onclick="closeMobileMenu()">Thành viên</a>
             <button class="btn-ghost" onclick="handleLogin(); closeMobileMenu()">Đăng nhập</button>
             <button class="btn-primary" onclick="smoothScroll('categories'); closeMobileMenu()">Khám phá ngay</button>
         </div>
@@ -274,7 +276,7 @@
     <!-- Review Section -->
     <section id="reviews" class="reviews-section">
         <div class="container">
-            <h2 class="section-title">Review thật từ "Người trong cuộc"</h2>
+            <h2 class="section-title">ULISER nói gì về nền tảng này</h2>
             <p class="section-subtitle">Nghe chia sẻ từ các thành viên CLB</p>
 
             <div class="reviews-masonry" id="reviewsMasonry">
@@ -316,21 +318,18 @@
                     <img src="assets/images/CNT/Bùi Thị Thảo Nguyên.jpg" alt="Member 1" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Bùi Thị Thảo Nguyên</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <img src="assets/images/CNT/Phan Thị Ngọc.jpg" alt="Member 2" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Phan Thị Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <img src="assets/images/CNT/Quyết Nguyễn Ánh Ngọc.jpg" alt="Member 3" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Quyết Nguyễn Ánh Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
 
@@ -340,28 +339,24 @@
                     <img src="assets/images/CNT/Trần Hồng Ngọc.jpg" alt="Member 4" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Trần Hồng Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <img src="assets/images/CNT/trần thị bảo ngọc.JPG" alt="Member 5" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Trần Thị Bảo Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <img src="assets/images/CNT/Tạ Bích Ngọc_.jpg" alt="Member 6" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Tạ Bích Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
                 <div class="team-card">
                     <img src="assets/images/CNT/Tạ Phương Ngọc.jpg" alt="Member 7" class="team-avatar">
                     <div class="team-info">
                         <h3 class="team-name">Tạ Phương Ngọc</h3>
-                        <p class="team-mssv">MSSV: 2004xxxx</p>
                     </div>
                 </div>
             </div>
@@ -380,24 +375,28 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-message">
-                <a href="#" class="logo footer-logo">
-                    <img src="assets/images/main_logo.png" class="logo-img" alt="ULIS Club Hub Logo">
-                    <span class="logo-text">ULIS Club Hub</span>
-                </a>
-                <!-- <p>
-                    Chúng tôi tạo ra CLB Hub vì tin rằng mỗi sinh viên xứng đáng tìm thấy cộng đồng
-                    của riêng mình - nơi họ có thể phát triển, học hỏi và tạo nên những kỷ niệm tuyệt vời.
-                </p> -->
-            </div>
             <div class="footer-content">
+                <div class="footer-column footer-contact-col">
+                    <a href="#" class="logo footer-logo" style="margin-bottom: var(--spacing-lg);">
+                        <img src="assets/images/main_logo.png" class="logo-img" alt="ULIS Club Hub Logo">
+                        <span class="logo-text">ULIS Club Hub</span>
+                    </a>
+                    <h4>Thông tin liên hệ</h4>
+                    <ul class="footer-contact-list">
+                        <li><span class="contact-icon">📍</span> <span>Trường Đại học Ngoại ngữ - ĐHQGHN, Số 2, Đường Phạm Văn Đồng, Cầu Giấy, Hà Nội, Việt Nam</span></li>
+                        <li><span class="contact-icon">📞</span> <span><a href="tel:0971736190">0971736190</a></span></li>
+                        <li><span class="contact-icon">✉️</span> <span><a href="mailto:ulisclubhub84@gmail.com">ulisclubhub84@gmail.com</a></span></li>
+                    </ul>
+                </div>
                 <div class="footer-column">
                     <h4>Điều hướng</h4>
                     <ul>
                         <li><a href="#categories">Danh mục CLB</a></li>
+                        <li><a href="#benefits">Lợi ích</a></li>
                         <li><a href="#top-clubs">Top Clubs</a></li>
-                        <li><a href="#tips">Cẩm nang</a></li>
                         <li><a href="#reviews">Review</a></li>
+                        <li><a href="#tips">Cẩm nang</a></li>
+                        <li><a href="#team">Thành viên</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -497,9 +496,9 @@
                 </div>
             </div>
             <div class="modal-footer" id="sectionFormLink">
-                <a id="modalFormLink" href="#" class="btn-primary btn-full-width" target="_blank">
-                    ✍️ Điền Form Đăng Ký
-                </a>
+                <button id="modalFormLink" onclick="handleClubFormClick()" class="btn-primary btn-full-width">
+                    🖋 Điền form đăng ký
+                </button>
             </div>
         </div>
     </div>

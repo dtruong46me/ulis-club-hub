@@ -284,12 +284,7 @@ function openClubModal(clubId) {
     setSection('sectionBenefits', club.benefits, 'modalClubBenefits');
 
     const formSection = document.getElementById('sectionFormLink');
-    if (club.formlink && club.formlink.trim() !== '') {
-        formSection.style.display = 'block';
-        document.getElementById('modalFormLink').href = club.formlink;
-    } else {
-        formSection.style.display = 'none';
-    }
+    formSection.style.display = 'block';
 
     // Render gallery
     renderClubGallery(club);
@@ -627,6 +622,14 @@ function handleLogin() {
     showNotification('Tính năng Đăng nhập sẽ ra mắt trong Phase tiếp theo. Vui lòng quay lại sau!');
 }
 
+function handleClubFormClick() {
+    if (selectedClub && selectedClub.formlink && selectedClub.formlink.trim() !== '') {
+        window.open(selectedClub.formlink, '_blank');
+    } else {
+        showNotification('Sẽ cập nhật khi có đợt tuyển quân');
+    }
+}
+
 // ============================================
 // UTILITY FUNCTIONS
 // ============================================
@@ -643,7 +646,7 @@ function showNotification(message) {
         padding: 16px 24px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 999;
+        z-index: 10000;
         animation: slideInRight 0.3s ease;
         font-weight: 600;
     `;
